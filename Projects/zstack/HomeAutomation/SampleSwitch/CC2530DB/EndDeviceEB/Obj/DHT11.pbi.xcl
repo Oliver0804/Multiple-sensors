@@ -1,137 +1,137 @@
-"E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\Source\DHT11.c"
+"C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\DHT11.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\Source
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\Source
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\Source
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\Source
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\ZMain\TI2530DB
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\ZMain\TI2530DB
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\include
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\include
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\include
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\include
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\high_level
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\high_level
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mt
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\mt
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\osal\include
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\osal\include
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\services\saddr
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\services\saddr
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\services\sdata
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\services\sdata
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\af
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\af
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\bdb
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\bdb
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\gp
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\gp
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\nwk
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\nwk
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sapi
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sapi
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sec
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sec
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sys
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\sys
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\zcl
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\zcl
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\zdo
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\stack\zdo
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\zmac
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\zmac
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\zmac\f8w
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\zmac\f8w
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\Common
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\Common
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\SPI
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\SPI
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\Font
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\Font
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_LCD_SPI
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_LCD_SPI
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_OLED
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_OLED
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_TFT
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\HW_LCD\HAL_TFT
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\inc
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\inc
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\lib\dlib
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\lib\dlib
 -I
-D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\inc\clib
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\inc\clib
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\Source
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\Source
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\Source
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\ZMain\TI2530DB
+C:\Texas Instruments\Multiple_sensors\Projects\zstack\ZMain\TI2530DB
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\include
+C:\Texas Instruments\Multiple_sensors\Components\hal\include
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\mac\include
+C:\Texas Instruments\Multiple_sensors\Components\mac\include
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\mac\high_level
+C:\Texas Instruments\Multiple_sensors\Components\mac\high_level
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\mac\low_level\srf04
+C:\Texas Instruments\Multiple_sensors\Components\mac\low_level\srf04
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\mac\low_level\srf04\single_chip
+C:\Texas Instruments\Multiple_sensors\Components\mac\low_level\srf04\single_chip
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\mt
+C:\Texas Instruments\Multiple_sensors\Components\mt
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\osal\include
+C:\Texas Instruments\Multiple_sensors\Components\osal\include
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\services\saddr
+C:\Texas Instruments\Multiple_sensors\Components\services\saddr
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\services\sdata
+C:\Texas Instruments\Multiple_sensors\Components\services\sdata
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\af
+C:\Texas Instruments\Multiple_sensors\Components\stack\af
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\bdb
+C:\Texas Instruments\Multiple_sensors\Components\stack\bdb
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\gp
+C:\Texas Instruments\Multiple_sensors\Components\stack\gp
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\nwk
+C:\Texas Instruments\Multiple_sensors\Components\stack\nwk
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\sapi
+C:\Texas Instruments\Multiple_sensors\Components\stack\sapi
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\sec
+C:\Texas Instruments\Multiple_sensors\Components\stack\sec
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\sys
+C:\Texas Instruments\Multiple_sensors\Components\stack\sys
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\zcl
+C:\Texas Instruments\Multiple_sensors\Components\stack\zcl
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\stack\zdo
+C:\Texas Instruments\Multiple_sensors\Components\stack\zdo
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\zmac
+C:\Texas Instruments\Multiple_sensors\Components\zmac
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\zmac\f8w
+C:\Texas Instruments\Multiple_sensors\Components\zmac\f8w
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB\Common
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB\Common
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB\SPI
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB\SPI
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB\HW_LCD\Font
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB\HW_LCD\Font
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB\HW_LCD\HAL_LCD_SPI
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB\HW_LCD\HAL_LCD_SPI
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB\HW_LCD\HAL_OLED
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB\HW_LCD\HAL_OLED
 -I
-E:\IDE\Zigbee\1. 基于ZCL属性上报20210929\7.温湿度传感器DHT11\Z-Stack 3.0.1\Components\hal\target\CC2530EB\HW_LCD\HAL_TFT
+C:\Texas Instruments\Multiple_sensors\Components\hal\target\CC2530EB\HW_LCD\HAL_TFT
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

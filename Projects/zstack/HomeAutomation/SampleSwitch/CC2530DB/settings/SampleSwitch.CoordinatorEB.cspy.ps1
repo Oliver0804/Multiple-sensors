@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\icetz\Desktop\code\zigbee\创思ZIGBEE3.0协议栈资料V3.0.11\4.ZigBee3.0温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.general.xcl" --backend -f "C:\Users\icetz\Desktop\code\zigbee\创思ZIGBEE3.0协议栈资料V3.0.11\4.ZigBee3.0温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.general.xcl" --backend -f "C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Users\icetz\Desktop\code\zigbee\创思ZIGBEE3.0协议栈资料V3.0.11\4.ZigBee3.0温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\icetz\Desktop\code\zigbee\创思ZIGBEE3.0协议栈资料V3.0.11\4.ZigBee3.0温湿度传感器DHT11\Z-Stack 3.0.1\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.general.xcl" --debug_file=$debugfile --backend -f "C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\settings\SampleSwitch.CoordinatorEB.driver.xcl" 
 }

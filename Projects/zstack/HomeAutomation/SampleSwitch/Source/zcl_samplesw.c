@@ -455,6 +455,9 @@ static void zclSampleSw_HandleKeys( byte shift, byte keys )
   if(keys & HAL_KEY_SW_6)
   {
     HalLedSet(HAL_LED_2, HAL_LED_MODE_TOGGLE);  
+    zgWriteStartupOptions(ZG_STARTUP_SET, (ZCD_STARTOPT_DEFAULT_NETWORK_STATE | ZCD_STARTOPT_DEFAULT_CONFIG_STATE) );
+    ZDOInitDevice(0);
+
   } 
 }
   
@@ -1141,41 +1144,41 @@ uint16 temp_O2=0xA2;
       uint16 temp_O2;
       */
       reportCmd->numAttr = 9;
-      reportCmd->attrList[0].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[0].attrID = 0x0001;
       reportCmd->attrList[0].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[0].attrData)) = temp_VOC;
       
-      reportCmd->attrList[1].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[1].attrID = 0x0002;
       reportCmd->attrList[1].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[1].attrData)) = temp_O3;
       
             
-      reportCmd->attrList[2].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[2].attrID = 0x0003;
       reportCmd->attrList[2].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[2].attrData)) = temp_CHO2;
       
                   
-      reportCmd->attrList[3].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[3].attrID = 0x0004;
       reportCmd->attrList[3].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[3].attrData)) = temp_CO;
                   
-      reportCmd->attrList[4].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[4].attrID = 0x0005;
       reportCmd->attrList[4].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[4].attrData)) = temp_HUMIDITY;
                   
-      reportCmd->attrList[5].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[5].attrID = 0x0006;
       reportCmd->attrList[5].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[5].attrData)) = temp_TEMPERATURE;
                   
-      reportCmd->attrList[6].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[6].attrID = 0x0007;
       reportCmd->attrList[6].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[6].attrData)) = temp_PM25;
                   
-      reportCmd->attrList[7].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[7].attrID = 0x0008;
       reportCmd->attrList[7].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[7].attrData)) = temp_CO2;
                   
-      reportCmd->attrList[8].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
+      reportCmd->attrList[8].attrID = 0x0009;
       reportCmd->attrList[8].dataType = ZCL_DATATYPE_ENUM16;
       *((uint16 *)(reportCmd->attrList[8].attrData)) = temp_O2;
       //strcpy((char *)reportCmd->attrList[0].attrData,(char const *)temp_VOC);  //×Ö·û´®Êý¾Ý

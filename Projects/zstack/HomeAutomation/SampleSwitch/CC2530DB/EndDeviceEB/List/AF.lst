@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.20.1.5333 for 8051               26/Apr/2022  13:47:20
+# IAR C/C++ Compiler V10.20.1.5333 for 8051               28/Apr/2022  00:42:27
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -14,7 +14,7 @@
 #    Source file        =  
 #        C:\Texas Instruments\Multiple_sensors\Components\stack\af\AF.c
 #    Command line       =  
-#        -f C:\Users\icetz\AppData\Local\Temp\EWF218.tmp ("C:\Texas
+#        -f C:\Users\icetz\AppData\Local\Temp\EW185F.tmp ("C:\Texas
 #        Instruments\Multiple_sensors\Components\stack\af\AF.c" -D SECURE=1 -D
 #        TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1 -D xMT_TASK -D
 #        xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D xMT_ZDO_MGMT -D
