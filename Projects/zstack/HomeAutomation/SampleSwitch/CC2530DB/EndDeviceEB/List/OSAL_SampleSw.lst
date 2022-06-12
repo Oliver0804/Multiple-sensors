@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.20.1.5333 for 8051               28/Apr/2022  00:42:41
+# IAR C/C++ Compiler V10.20.1.5333 for 8051               12/Jun/2022  16:35:45
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -15,7 +15,7 @@
 #        C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\OSAL_SampleSw.c
 #    Command line       =  
-#        -f C:\Users\icetz\AppData\Local\Temp\EW4FFD.tmp ("C:\Texas
+#        -f C:\Users\icetz\AppData\Local\Temp\EW385C.tmp ("C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\OSAL_SampleSw.c"
 #        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1
 #        -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
@@ -38,7 +38,7 @@
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
-#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DDEFAULT_CHANLIST=0x00008000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 #        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
 #        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
@@ -48,7 +48,7 @@
 #        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
 #        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
 #        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
-#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=1000
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas
@@ -227,9 +227,10 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000006   ....         DW `??APS_event_loop::?relay`
    \   000008   ....         DW `??APSF_ProcessEvent::?relay`
    \   00000A   ....         DW `??ZDApp_event_loop::?relay`
-   \   00000C   ....         DW `??zcl_event_loop::?relay`
-   \   00000E   ....         DW `??bdb_event_loop::?relay`
-   \   000010   ....         DW `??zclSampleSw_event_loop::?relay`
+   \   00000C   ....         DW `??ZDNwkMgr_event_loop::?relay`
+   \   00000E   ....         DW `??zcl_event_loop::?relay`
+   \   000010   ....         DW `??bdb_event_loop::?relay`
+   \   000012   ....         DW `??zclSampleSw_event_loop::?relay`
      92            macEventLoop,
      93            nwk_event_loop,
      94          #if !defined (DISABLE_GREENPOWER_BASIC_PROXY) && (ZG_BUILD_RTR_TYPE)
@@ -271,7 +272,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \                                 In  segment XDATA_ROM_C, align 1
     129          const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
    \                     tasksCnt:
-   \   000000   09           DB 9
+   \   000000   0A           DB 10
 
    \                                 In  segment XDATA_Z, align 1, keep-with-next
     130          uint16 *tasksEvents;
@@ -305,7 +306,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     148          
     149            tasksEvents = (uint16 *)osal_mem_alloc( sizeof( uint16 ) * tasksCnt);
    \   000004                ; Setup parameters for call to function osal_mem_alloc
-   \   000004   7A12         MOV       R2,#0x12
+   \   000004   7A14         MOV       R2,#0x14
    \   000006   7B00         MOV       R3,#0x0
    \   000008   12....       LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
    \   00000B   90....       MOV       DPTR,#tasksEvents
@@ -316,7 +317,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000012   F0           MOVX      @DPTR,A
     150            osal_memset( tasksEvents, 0, (sizeof( uint16 ) * tasksCnt));
    \   000013                ; Setup parameters for call to function osal_memset
-   \   000013   7C12         MOV       R4,#0x12
+   \   000013   7C14         MOV       R4,#0x14
    \   000015   7D00         MOV       R5,#0x0
    \   000017   7900         MOV       R1,#0x0
    \   000019   12....       LCALL     `??osal_memset::?relay`; Banked call to: osal_memset
@@ -355,6 +356,9 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000037   12....       LCALL     `??ZDApp_Init::?relay`; Banked call to: ZDApp_Init
     166          #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
     167            ZDNwkMgr_Init( taskID++ );
+   \   00003A                ; Setup parameters for call to function ZDNwkMgr_Init
+   \   00003A   7906         MOV       R1,#0x6
+   \   00003C   12....       LCALL     `??ZDNwkMgr_Init::?relay`; Banked call to: ZDNwkMgr_Init
     168          #endif
     169            // Added to include TouchLink functionality 
     170            #if defined ( INTER_PAN )
@@ -369,24 +373,24 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     179              touchLinkTarget_Init( taskID++ );
     180            #endif
     181            zcl_Init( taskID++ );
-   \   00003A                ; Setup parameters for call to function zcl_Init
-   \   00003A   7906         MOV       R1,#0x6
-   \   00003C   12....       LCALL     `??zcl_Init::?relay`; Banked call to: zcl_Init
-    182            bdb_Init( taskID++ );
-   \   00003F                ; Setup parameters for call to function bdb_Init
+   \   00003F                ; Setup parameters for call to function zcl_Init
    \   00003F   7907         MOV       R1,#0x7
-   \   000041   12....       LCALL     `??bdb_Init::?relay`; Banked call to: bdb_Init
-    183            zclSampleSw_Init( taskID++ );
-   \   000044                ; Setup parameters for call to function zclSampleSw_Init
+   \   000041   12....       LCALL     `??zcl_Init::?relay`; Banked call to: zcl_Init
+    182            bdb_Init( taskID++ );
+   \   000044                ; Setup parameters for call to function bdb_Init
    \   000044   7908         MOV       R1,#0x8
-   \   000046   12....       LCALL     `??zclSampleSw_Init::?relay`; Banked call to: zclSampleSw_Init
+   \   000046   12....       LCALL     `??bdb_Init::?relay`; Banked call to: bdb_Init
+    183            zclSampleSw_Init( taskID++ );
+   \   000049                ; Setup parameters for call to function zclSampleSw_Init
+   \   000049   7909         MOV       R1,#0x9
+   \   00004B   12....       LCALL     `??zclSampleSw_Init::?relay`; Banked call to: zclSampleSw_Init
     184          #if (defined OTA_CLIENT) && (OTA_CLIENT == TRUE)
     185            zclOTA_Init( taskID );
     186          #endif
     187          }
-   \   000049   D083         POP       DPH
-   \   00004B   D082         POP       DPL
-   \   00004D   02....       LJMP      ?BRET
+   \   00004E   D083         POP       DPH
+   \   000050   D082         POP       DPL
+   \   000052   02....       LJMP      ?BRET
 
    \                                 In  segment BANK_RELAYS, align 1
    \                     `??osalInitTasks::?relay`:
@@ -405,6 +409,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
         2   -> APS_Init
         2   -> Hal_Init
         2   -> ZDApp_Init
+        2   -> ZDNwkMgr_Init
         2   -> bdb_Init
         2   -> macTaskInit
         2   -> nwk_init
@@ -418,21 +423,21 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
 
    Bytes  Function/Label
    -----  --------------
-      80  osalInitTasks
+      85  osalInitTasks
        6  osalInitTasks::?relay
-      18  tasksArr
+      20  tasksArr
        1  tasksCnt
        2  tasksEvents
 
  
- 80 bytes in segment BANKED_CODE
+ 85 bytes in segment BANKED_CODE
   6 bytes in segment BANK_RELAYS
- 19 bytes in segment XDATA_ROM_C
+ 21 bytes in segment XDATA_ROM_C
   2 bytes in segment XDATA_Z
  
   6 bytes of CODE     memory
- 19 bytes of CONST    memory
- 80 bytes of HUGECODE memory
+ 21 bytes of CONST    memory
+ 85 bytes of HUGECODE memory
   2 bytes of XDATA    memory
 
 Errors: none

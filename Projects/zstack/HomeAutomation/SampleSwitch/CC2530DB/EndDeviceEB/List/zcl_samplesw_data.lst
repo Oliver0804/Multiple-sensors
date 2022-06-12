@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.20.1.5333 for 8051               28/Apr/2022  00:42:45
+# IAR C/C++ Compiler V10.20.1.5333 for 8051               12/Jun/2022  16:35:49
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -15,7 +15,7 @@
 #        C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\zcl_samplesw_data.c
 #    Command line       =  
-#        -f C:\Users\icetz\AppData\Local\Temp\EW6229.tmp ("C:\Texas
+#        -f C:\Users\icetz\AppData\Local\Temp\EW49CD.tmp ("C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\zcl_samplesw_data.c"
 #        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1
 #        -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
@@ -38,7 +38,7 @@
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
-#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DDEFAULT_CHANLIST=0x00008000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 #        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
 #        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
@@ -48,7 +48,7 @@
 #        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
 #        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
 #        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
-#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=1000
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas
@@ -198,7 +198,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
      69          #define SAMPLESW_DEVICE_VERSION     1
      70          #define SAMPLESW_FLAGS              0
      71          
-     72          #define SAMPLESW_HWVERSION          0
+     72          #define SAMPLESW_HWVERSION          1
      73          #define SAMPLESW_ZCLVERSION         0
      74          
      75          #define DEFAULT_PHYSICAL_ENVIRONMENT 0
@@ -229,7 +229,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \                                 In  segment XDATA_ROM_C, align 1
      95          const uint8 zclSampleSw_HWRevision = SAMPLESW_HWVERSION;
    \                     zclSampleSw_HWRevision:
-   \   000000   00           DB 0
+   \   000000   01           DB 1
 
    \                                 In  segment XDATA_ROM_C, align 1
      96          const uint8 zclSampleSw_ZCLVersion = SAMPLESW_ZCLVERSION;
@@ -237,25 +237,25 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000000   00           DB 0
 
    \                                 In  segment XDATA_ROM_C, align 1
-     97          const uint8 zclSampleSw_ManufacturerName[] = { 16, 'O','e','x','a','s','I','n','s','t','r','u','m','e','n','t','s' };
+     97          const uint8 zclSampleSw_ManufacturerName[] = { 16, 'O','l','i','v','e','r',' ','2','0','2','2','0','6','1','2','A' };
    \                     zclSampleSw_ManufacturerName:
    \   000000   10           DB 16
    \   000001   4F           DB 79
-   \   000002   65           DB 101
-   \   000003   78           DB 120
-   \   000004   61           DB 97
-   \   000005   73           DB 115
-   \   000006   49           DB 73
-   \   000007   6E           DB 110
-   \   000008   73           DB 115
-   \   000009   74           DB 116
-   \   00000A   72           DB 114
-   \   00000B   75           DB 117
-   \   00000C   6D           DB 109
-   \   00000D   65           DB 101
-   \   00000E   6E           DB 110
-   \   00000F   74           DB 116
-   \   000010   73           DB 115
+   \   000002   6C           DB 108
+   \   000003   69           DB 105
+   \   000004   76           DB 118
+   \   000005   65           DB 101
+   \   000006   72           DB 114
+   \   000007   20           DB 32
+   \   000008   32           DB 50
+   \   000009   30           DB 48
+   \   00000A   32           DB 50
+   \   00000B   32           DB 50
+   \   00000C   30           DB 48
+   \   00000D   36           DB 54
+   \   00000E   31           DB 49
+   \   00000F   32           DB 50
+   \   000010   41           DB 65
 
    \                                 In  segment XDATA_ROM_C, align 1
      98          const uint8 zclSampleSw_ModelId[] = { 16, 'O','l','i','v','e','r','0',' ',' ',' ',' ',' ',' ',' ',' ',' ' };
@@ -279,7 +279,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000010   20           DB 32
 
    \                                 In  segment XDATA_ROM_C, align 1
-     99          const uint8 zclSampleSw_DateCode[] = { 16, '2','0','2','2','0','4','2','4',' ',' ',' ',' ',' ',' ',' ',' ' };
+     99          const uint8 zclSampleSw_DateCode[] = { 16, '2','0','2','2','0','6','1','2',' ',' ',' ',' ',' ',' ',' ',' ' };
    \                     zclSampleSw_DateCode:
    \   000000   10           DB 16
    \   000001   32           DB 50
@@ -287,9 +287,9 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000003   32           DB 50
    \   000004   32           DB 50
    \   000005   30           DB 48
-   \   000006   34           DB 52
-   \   000007   32           DB 50
-   \   000008   34           DB 52
+   \   000006   36           DB 54
+   \   000007   31           DB 49
+   \   000008   32           DB 50
    \   000009   20           DB 32
    \   00000A   20           DB 32
    \   00000B   20           DB 32
@@ -389,7 +389,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000045   03           DB 3
    \   000046   ....         DW zclSampleSw_DeviceEnable
    \   000048   0000         DW 0
-   \   00004A   FDFF         DW 65533
+   \   00004A   0203         DW 770
    \   00004C   21           DB 33
    \   00004D   01           DB 1
    \   00004E   ....         DW zclSampleSw_clusterRevision_all
@@ -399,7 +399,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000055   03           DB 3
    \   000056   ....         DW zclSampleSw_IdentifyTime
    \   000058   0300         DW 3
-   \   00005A   FDFF         DW 65533
+   \   00005A   0203         DW 770
    \   00005C   21           DB 33
    \   00005D   41           DB 65
    \   00005E   ....         DW zclSampleSw_clusterRevision_all
@@ -414,20 +414,25 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   00006D   03           DB 3
    \   00006E   ....         DW zclSampleSw_OnOffSwitchActions
    \   000070   0700         DW 7
-   \   000072   FDFF         DW 65533
+   \   000072   0203         DW 770
    \   000074   21           DB 33
    \   000075   01           DB 1
    \   000076   ....         DW zclSampleSw_clusterRevision_all
    \   000078   0600         DW 6
-   \   00007A   FDFF         DW 65533
+   \   00007A   0203         DW 770
    \   00007C   21           DB 33
    \   00007D   81           DB 129
    \   00007E   ....         DW zclSampleSw_clusterRevision_all
-   \   000080   0400         DW 4
-   \   000082   FDFF         DW 65533
+   \   000080   1300         DW 19
+   \   000082   0203         DW 770
    \   000084   21           DB 33
    \   000085   81           DB 129
-   \   000086   ....         DW zclSampleSw_clusterRevision_all
+   \   000086   ....         DW temp_VOC
+   \   000088   0204         DW 1026
+   \   00008A   0203         DW 770
+   \   00008C   21           DB 33
+   \   00008D   81           DB 129
+   \   00008E   ....         DW zclSampleSw_clusterRevision_all
     117          {
     118            // *** General Basic Cluster Attributes ***
     119            {
@@ -580,113 +585,143 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     266                (void *)&zclSampleSw_clusterRevision_all
     267              }
     268            },
-    269            // *** Groups Cluster *** //
+    269              // *** Sensor Cluster *** //
     270            {
-    271              ZCL_CLUSTER_ID_GEN_GROUPS,
+    271              ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,
     272              {  // Attribute record
     273                ATTRID_CLUSTER_REVISION,
     274                ZCL_DATATYPE_UINT16,
     275                ACCESS_CONTROL_READ | ACCESS_CLIENT,
-    276                (void *)&zclSampleSw_clusterRevision_all
+    276                (void *)&temp_VOC
     277              }
-    278            }
-    279          };
-    280          
+    278            },
+    279            // *** Groups Cluster *** //
+    280            {
+    281              ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
+    282              {  // Attribute record
+    283                ATTRID_CLUSTER_REVISION,
+    284                ZCL_DATATYPE_UINT16,
+    285                ACCESS_CONTROL_READ | ACCESS_CLIENT,
+    286                (void *)&zclSampleSw_clusterRevision_all
+    287              }
+    288            }
+    289          };
+    290          
 
    \                                 In  segment CODE_C, align 1
-    281          uint8 CONST zclSampleSw_NumAttributes = ( sizeof(zclSampleSw_Attrs) / sizeof(zclSampleSw_Attrs[0]) );
+    291          uint8 CONST zclSampleSw_NumAttributes = ( sizeof(zclSampleSw_Attrs) / sizeof(zclSampleSw_Attrs[0]) );
    \                     zclSampleSw_NumAttributes:
-   \   000000   11           DB 17
-    282          
-    283          /*********************************************************************
-    284           * SIMPLE DESCRIPTOR
-    285           */
-    286          // This is the Cluster ID List and should be filled with Application
-    287          // specific cluster IDs.
+   \   000000   12           DB 18
+    292          
+    293          /*********************************************************************
+    294           * SIMPLE DESCRIPTOR
+    295           */
+    296          // This is the Cluster ID List and should be filled with Application
+    297          // specific cluster IDs.
 
    \                                 In  segment XDATA_ROM_C, align 1
-    288          const cId_t zclSampleSw_InClusterList[] =
+    298          const cId_t zclSampleSw_InClusterList[] =
    \                     zclSampleSw_InClusterList:
    \   000000   0000         DW 0
    \   000002   0300         DW 3
-   \   000004   0700         DW 7
-    289          {
-    290            ZCL_CLUSTER_ID_GEN_BASIC,
-    291            ZCL_CLUSTER_ID_GEN_IDENTIFY,
-    292            ZCL_CLUSTER_ID_GEN_ON_OFF_SWITCH_CONFIG
-    293          };
-    294          
-    295          #define ZCLSAMPLESW_MAX_INCLUSTERS    ( sizeof( zclSampleSw_InClusterList ) / sizeof( zclSampleSw_InClusterList[0] ))
-    296          
+   \   000004   1400         DW 20
+    299          {
+    300            ZCL_CLUSTER_ID_GEN_BASIC,
+    301            ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    302            ZCL_CLUSTER_ID_GEN_MULTISTATE_VALUE_BASIC
+    303          };
+    304          
+    305          #define ZCLSAMPLESW_MAX_INCLUSTERS    ( sizeof( zclSampleSw_InClusterList ) / sizeof( zclSampleSw_InClusterList[0] ))
+    306          
 
    \                                 In  segment XDATA_ROM_C, align 1
-    297          const cId_t zclSampleSw_OutClusterList[] =
+    307          const cId_t zclSampleSw_OutClusterList[] =
    \                     zclSampleSw_OutClusterList:
    \   000000   0300         DW 3
-   \   000002   0600         DW 6
-   \   000004   0400         DW 4
-    298          {
-    299            ZCL_CLUSTER_ID_GEN_IDENTIFY,
-    300            ZCL_CLUSTER_ID_GEN_ON_OFF,
-    301            ZCL_CLUSTER_ID_GEN_GROUPS,
-    302          };
-    303          
-    304          #define ZCLSAMPLESW_MAX_OUTCLUSTERS   ( sizeof( zclSampleSw_OutClusterList ) / sizeof( zclSampleSw_OutClusterList[0] ))
-    305          
+   \   000002   1300         DW 19
+   \   000004   1300         DW 19
+   \   000006   1300         DW 19
+   \   000008   1300         DW 19
+   \   00000A   1300         DW 19
+   \   00000C   1300         DW 19
+   \   00000E   1300         DW 19
+   \   000010   1300         DW 19
+   \   000012   1300         DW 19
+   \   000014   0400         DW 4
+    308          {
+    309            ZCL_CLUSTER_ID_GEN_IDENTIFY,
+    310            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//1
+    311            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//2
+    312            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//3
+    313            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//4
+    314            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//5
+    315            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//6
+    316            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//7
+    317            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//8
+    318            ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,//9
+    319            //ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,//10
+    320            ZCL_CLUSTER_ID_GEN_GROUPS,
+    321          };
+    322          
+    323          
+    324          
+    325          #define ZCLSAMPLESW_MAX_OUTCLUSTERS   ( sizeof( zclSampleSw_OutClusterList ) / sizeof( zclSampleSw_OutClusterList[0] ))
+    326          
 
    \                                 In  segment XDATA_I, align 1, keep-with-next
-    306          SimpleDescriptionFormat_t zclSampleSw_SimpleDesc =
+    327          SimpleDescriptionFormat_t zclSampleSw_SimpleDesc =
    \                     zclSampleSw_SimpleDesc:
    \   000000                DS 12
    \   00000C                REQUIRE `?<Initializer for zclSampleSw_SimpleDesc>`
    \   00000C                REQUIRE __INIT_XDATA_I
-    307          {
-    308            SAMPLESW_ENDPOINT,                  //  int Endpoint;
-    309            ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
-    310            ZCL_HA_DEVICEID_ON_OFF_LIGHT_SWITCH,//  uint16 AppDeviceId[2];
-    311            SAMPLESW_DEVICE_VERSION,            //  int   AppDevVer:4;
-    312            SAMPLESW_FLAGS,                     //  int   AppFlags:4;
-    313            ZCLSAMPLESW_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
-    314            (cId_t *)zclSampleSw_InClusterList, //  byte *pAppInClusterList;
-    315            ZCLSAMPLESW_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
-    316            (cId_t *)zclSampleSw_OutClusterList //  byte *pAppInClusterList;
-    317          };
-    318          
-    319          /*********************************************************************
-    320           * GLOBAL FUNCTIONS
-    321           */
-    322          
-    323          /*********************************************************************
-    324           * LOCAL FUNCTIONS
-    325           */
-    326          
-    327          /*********************************************************************
-    328           * @fn      zclSampleLight_ResetAttributesToDefaultValues
-    329           *
-    330           * @brief   Reset all writable attributes to their default values.
-    331           *
-    332           * @param   none
-    333           *
-    334           * @return  none
-    335           */
+    328          {
+    329            SAMPLESW_ENDPOINT,                  //  int Endpoint;
+    330            ZCL_HA_PROFILE_ID,                  //  uint16 AppProfId[2];
+    331            ZCL_HA_DEVICEID_TEMPERATURE_SENSOR,      //  uint16 AppDeviceId[2];
+    332            SAMPLESW_DEVICE_VERSION,            //  int   AppDevVer:4;
+    333            SAMPLESW_FLAGS,                     //  int   AppFlags:4;
+    334            ZCLSAMPLESW_MAX_INCLUSTERS,         //  byte  AppNumInClusters;
+    335            (cId_t *)zclSampleSw_InClusterList, //  byte *pAppInClusterList;
+    336            ZCLSAMPLESW_MAX_OUTCLUSTERS,        //  byte  AppNumInClusters;
+    337            (cId_t *)zclSampleSw_OutClusterList, //  byte *pAppInClusterList;
+    338          
+    339          };
+    340          
+    341          /*********************************************************************
+    342           * GLOBAL FUNCTIONS
+    343           */
+    344          
+    345          /*********************************************************************
+    346           * LOCAL FUNCTIONS
+    347           */
+    348          
+    349          /*********************************************************************
+    350           * @fn      zclSampleLight_ResetAttributesToDefaultValues
+    351           *
+    352           * @brief   Reset all writable attributes to their default values.
+    353           *
+    354           * @param   none
+    355           *
+    356           * @return  none
+    357           */
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-    336          void zclSampleSw_ResetAttributesToDefaultValues(void)
+    358          void zclSampleSw_ResetAttributesToDefaultValues(void)
    \                     zclSampleSw_ResetAttributesToDefaultValues:
-    337          {
+    359          {
    \   000000   C082         PUSH      DPL
    \   000002   C083         PUSH      DPH
    \   000004                ; Saved register size: 2
    \   000004                ; Auto size: 0
-    338            int i;
-    339            
-    340            zclSampleSw_LocationDescription[0] = 16;
+    360            int i;
+    361            
+    362            zclSampleSw_LocationDescription[0] = 16;
    \   000004   90....       MOV       DPTR,#zclSampleSw_LocationDescription
    \   000007   7410         MOV       A,#0x10
    \   000009   F0           MOVX      @DPTR,A
-    341            for (i = 1; i <= 16; i++)
-    342            {
-    343              zclSampleSw_LocationDescription[i] = ' ';
+    363            for (i = 1; i <= 16; i++)
+    364            {
+    365              zclSampleSw_LocationDescription[i] = ' ';
    \   00000A   7420         MOV       A,#0x20
    \   00000C   A3           INC       DPTR
    \   00000D   7810         MOV       R0,#0x10
@@ -694,29 +729,29 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   00000F   F0           MOVX      @DPTR,A
    \   000010   A3           INC       DPTR
    \   000011   D8FC         DJNZ      R0,??zclSampleSw_ResetAttributesToDefaultValues_0
-    344            }
-    345            
-    346            zclSampleSw_PhysicalEnvironment = DEFAULT_PHYSICAL_ENVIRONMENT;
+    366            }
+    367            
+    368            zclSampleSw_PhysicalEnvironment = DEFAULT_PHYSICAL_ENVIRONMENT;
    \   000013   90....       MOV       DPTR,#zclSampleSw_PhysicalEnvironment
    \   000016   E4           CLR       A
    \   000017   F0           MOVX      @DPTR,A
-    347            zclSampleSw_DeviceEnable = DEFAULT_DEVICE_ENABLE_STATE;
+    369            zclSampleSw_DeviceEnable = DEFAULT_DEVICE_ENABLE_STATE;
    \   000018   90....       MOV       DPTR,#zclSampleSw_DeviceEnable
    \   00001B   04           INC       A
    \   00001C   F0           MOVX      @DPTR,A
-    348            
-    349            zclSampleSw_IdentifyTime = DEFAULT_IDENTIFY_TIME;
+    370            
+    371            zclSampleSw_IdentifyTime = DEFAULT_IDENTIFY_TIME;
    \   00001D   90....       MOV       DPTR,#zclSampleSw_IdentifyTime
    \   000020   E4           CLR       A
    \   000021   F0           MOVX      @DPTR,A
    \   000022   A3           INC       DPTR
    \   000023   F0           MOVX      @DPTR,A
-    350            
-    351            zclSampleSw_OnOffSwitchActions = ON_OFF_SWITCH_ACTIONS_TOGGLE; //note that the default specified by the zcl spec is ON_OFF_SWITCH_ACTIONS_ON, but for backward compatibility with TI's legacy sample-switch, we use here ON_OFF_SWITCH_ACTIONS_TOGGLE
+    372            
+    373            zclSampleSw_OnOffSwitchActions = ON_OFF_SWITCH_ACTIONS_TOGGLE; //note that the default specified by the zcl spec is ON_OFF_SWITCH_ACTIONS_ON, but for backward compatibility with TI's legacy sample-switch, we use here ON_OFF_SWITCH_ACTIONS_TOGGLE
    \   000024   90....       MOV       DPTR,#zclSampleSw_OnOffSwitchActions
    \   000027   7402         MOV       A,#0x2
    \   000029   F0           MOVX      @DPTR,A
-    352          }
+    374          }
    \   00002A   D083         POP       DPH
    \   00002C   D082         POP       DPL
    \   00002E   02....       LJMP      ?BRET
@@ -727,24 +762,24 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for zclSampleSw_SimpleDesc>`:
-   \   000000   08           DB 8
+   \   000000   03           DB 3
    \   000001   0401         DW 260
-   \   000003   0301         DW 259
+   \   000003   0203         DW 770
    \   000005   01           DB 1
    \   000006   03           DB 3
    \   000007   ....         DW zclSampleSw_InClusterList
-   \   000009   03           DB 3
+   \   000009   0B           DB 11
    \   00000A   ....         DW zclSampleSw_OutClusterList
 
    \                                 In  segment BANK_RELAYS, align 1
    \                     `??zclSampleSw_ResetAttributesToDefaultValues::?`:
    \   000000   12....       LCALL   ?BDISPATCH
    \   000003   ......       DC24    zclSampleSw_ResetAttributesToDefaultValues
-    353          
-    354          /****************************************************************************
-    355          ****************************************************************************/
-    356          
-    357          
+    375          
+    376          /****************************************************************************
+    377          ****************************************************************************/
+    378          
+    379          
 
    Maximum stack usage in bytes:
 
@@ -759,7 +794,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    -----  --------------
        1  ?<Initializer for zclSampleSw_DeviceEnable>
       12  ?<Initializer for zclSampleSw_SimpleDesc>
-     136  zclSampleSw_Attrs
+     144  zclSampleSw_Attrs
       17  zclSampleSw_DateCode
        1  zclSampleSw_DeviceEnable
        1  zclSampleSw_HWRevision
@@ -769,7 +804,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
       17  zclSampleSw_ManufacturerName
       17  zclSampleSw_ModelId
        1  zclSampleSw_NumAttributes
-       6  zclSampleSw_OutClusterList
+      22  zclSampleSw_OutClusterList
        1  zclSampleSw_PhysicalEnvironment
        1  zclSampleSw_PowerSource
       49  zclSampleSw_ResetAttributesToDefaultValues
@@ -781,14 +816,14 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
  
   49 bytes in segment BANKED_CODE
    6 bytes in segment BANK_RELAYS
- 137 bytes in segment CODE_C
+ 145 bytes in segment CODE_C
   13 bytes in segment XDATA_I
   13 bytes in segment XDATA_ID
-  68 bytes in segment XDATA_ROM_C
+  84 bytes in segment XDATA_ROM_C
   20 bytes in segment XDATA_Z
  
- 156 bytes of CODE     memory
-  68 bytes of CONST    memory
+ 164 bytes of CODE     memory
+  84 bytes of CONST    memory
   49 bytes of HUGECODE memory
   33 bytes of XDATA    memory
 

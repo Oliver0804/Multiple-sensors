@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.20.1.5333 for 8051               28/Apr/2022  11:22:35
+# IAR C/C++ Compiler V10.20.1.5333 for 8051               12/Jun/2022  16:35:49
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -15,7 +15,7 @@
 #        C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\zcl_samplesw.c
 #    Command line       =  
-#        -f C:\Users\icetz\AppData\Local\Temp\EWAC65.tmp ("C:\Texas
+#        -f C:\Users\icetz\AppData\Local\Temp\EW45D4.tmp ("C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\zcl_samplesw.c"
 #        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1
 #        -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
@@ -38,7 +38,7 @@
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
-#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DDEFAULT_CHANLIST=0x00008000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 #        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
 #        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
@@ -48,7 +48,7 @@
 #        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
 #        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
 #        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
-#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=1000
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas
@@ -282,7 +282,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     127          
 
    \                                 In  segment XDATA_I, align 1, keep-with-next
-    128          uint16 temp_VOC=0x00AA;
+    128          uint16 temp_VOC=0x08AC;
    \                     temp_VOC:
    \   000000                DS 2
    \   000002                REQUIRE `?<Initializer for temp_VOC>`
@@ -544,7 +544,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000023                ; Setup parameters for call to function zclGeneral_RegisterCmdCallbacks
    \   000023   7A..         MOV       R2,#zclSampleSw_CmdCallbacks & 0xff
    \   000025   7B..         MOV       R3,#(zclSampleSw_CmdCallbacks >> 8) & 0xff
-   \   000027   7908         MOV       R1,#0x8
+   \   000027   7903         MOV       R1,#0x3
    \   000029   12....       LCALL     `??zclGeneral_RegisterCmdCallbacks::?relay`; Banked call to: zclGeneral_RegisterCmdCallbacks
     282          
     283            zclSampleSw_ResetAttributesToDefaultValues();
@@ -560,7 +560,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000036   E4           CLR       A
    \   000037   93           MOVC      A,@A+DPTR
    \   000038   FA           MOV       R2,A
-   \   000039   7908         MOV       R1,#0x8
+   \   000039   7903         MOV       R1,#0x3
    \   00003B   12....       LCALL     `??zcl_registerAttrList::?relay`; Banked call to: zcl_registerAttrList
     287          
     288            // Register the Application to receive the unprocessed Foundation command/response messages
@@ -702,7 +702,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   0000D1   90....       MOV       DPTR,#__Constant_bb8
    \   0000D4   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
    \   0000D7   12....       LCALL     ?Subroutine8 & 0xFFFF
-   \                     ??CrossCallReturnLabel_57:
+   \                     ??CrossCallReturnLabel_59:
    \   0000DA   12....       LCALL     ?DEALLOC_XSTACK8
     338          #endif
     339          }
@@ -714,17 +714,17 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine8:
    \   000000   7A40         MOV       R2,#0x40
-   \   000002                REQUIRE ??Subroutine18_0
-   \   000002                ; // Fall through to label ??Subroutine18_0
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine18_0:
-   \   000000   7B00         MOV       R3,#0x0
    \   000002                REQUIRE ??Subroutine19_0
    \   000002                ; // Fall through to label ??Subroutine19_0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ??Subroutine19_0:
+   \   000000   7B00         MOV       R3,#0x0
+   \   000002                REQUIRE ??Subroutine20_0
+   \   000002                ; // Fall through to label ??Subroutine20_0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ??Subroutine20_0:
    \   000000   90....       MOV       DPTR,#zclSampleSw_TaskID
    \   000003   E0           MOVX      A,@DPTR
    \   000004   F9           MOV       R1,A
@@ -772,8 +772,8 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000010   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
    \   000013   7A00         MOV       R2,#0x0
    \   000015   7B10         MOV       R3,#0x10
-   \   000017   12....       LCALL     ??Subroutine19_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_60:
+   \   000017   12....       LCALL     ??Subroutine20_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_62:
    \   00001A   12....       LCALL     ?DEALLOC_XSTACK8
     359              zclGeneral_SendOnOff_CmdToggle( SAMPLESW_ENDPOINT, &zclSampleSw_DstAddr, FALSE, 0 );
    \   00001D                ; Setup parameters for call to function zcl_SendCommand
@@ -802,7 +802,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000052   7D00         MOV       R5,#0x0
    \   000054   7A..         MOV       R2,#zclSampleSw_DstAddr & 0xff
    \   000056   7B..         MOV       R3,#(zclSampleSw_DstAddr >> 8) & 0xff
-   \   000058   7908         MOV       R1,#0x8
+   \   000058   7903         MOV       R1,#0x3
    \   00005A   12....       LCALL     `??zcl_SendCommand::?relay`; Banked call to: zcl_SendCommand
    \   00005D   740B         MOV       A,#0xb
    \   00005F   12....       LCALL     ?DEALLOC_XSTACK8
@@ -966,7 +966,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   0000E3   90....       MOV       DPTR,#__Constant_bb8
    \   0000E6   12....       LCALL     ?PUSH_XSTACK8_X_FOUR
    \   0000E9   12....       LCALL     ?Subroutine8 & 0xFFFF
-   \                     ??CrossCallReturnLabel_58:
+   \                     ??CrossCallReturnLabel_60:
    \   0000EC   12....       LCALL     ?DEALLOC_XSTACK8
     430                
     431                return ( events ^ SAMPLEAPP_REPORT_EVT );
@@ -1147,8 +1147,8 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     536          #endif 
     537            }
    \                     ??zclSampleSw_ProcessCommissioningStatus_4:
-   \   00004A   12....       LCALL     ??Subroutine18_0 & 0xFFFF
-   \                     ??CrossCallReturnLabel_59:
+   \   00004A   12....       LCALL     ??Subroutine19_0 & 0xFFFF
+   \                     ??CrossCallReturnLabel_61:
    \   00004D   12....       LCALL     ?DEALLOC_XSTACK8
     538          }
    \                     ??zclSampleSw_ProcessCommissioningStatus_3:
@@ -1332,8 +1332,8 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   0000B0   A3           INC       DPTR
    \   0000B1   A3           INC       DPTR
    \   0000B2   A3           INC       DPTR
-   \   0000B3   12....       LCALL     ?Subroutine17 & 0xFFFF
-   \                     ??CrossCallReturnLabel_55:
+   \   0000B3   12....       LCALL     ?Subroutine18 & 0xFFFF
+   \                     ??CrossCallReturnLabel_57:
    \   0000B6   E0           MOVX      A,@DPTR
    \   0000B7   FC           MOV       R4,A
    \   0000B8   7D00         MOV       R5,#0x0
@@ -1414,7 +1414,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     619                zclSampleSw_ProcessInDiscAttrsRspCmd( pInMsg );
    \                     ??zclSampleSw_ProcessIncomingMsg_2:
    \   0000E9   12....       LCALL     ?Subroutine12 & 0xFFFF
-   \                     ??CrossCallReturnLabel_62:
+   \                     ??CrossCallReturnLabel_64:
    \   0000EC   8882         MOV       DPL,R0
    \   0000EE   8983         MOV       DPH,R1
    \   0000F0   A3           INC       DPTR
@@ -1425,7 +1425,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   0000F5   9B           SUBB      A,R3
    \   0000F6   5015         JNC       ??zclSampleSw_ProcessIncomingMsg_5
    \   0000F8   0A           INC       R2
-   \   0000F9   80F1         SJMP      ??CrossCallReturnLabel_62
+   \   0000F9   80F1         SJMP      ??CrossCallReturnLabel_64
     620                break;
     621          
     622              case ZCL_CMD_DISCOVER_ATTRS_EXT_RSP:
@@ -1437,7 +1437,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
     626              default:
     627                break;
     628            }
-   \                     ??CrossCallReturnLabel_63:
+   \                     ??CrossCallReturnLabel_65:
    \   0000FE   8001         SJMP      ??zclSampleSw_ProcessIncomingMsg_11
    \                     ??zclSampleSw_ProcessIncomingMsg_12:
    \   000100   0A           INC       R2
@@ -1456,8 +1456,8 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \                     ??zclSampleSw_ProcessIncomingMsg_5:
    \   00010D   85..82       MOV       DPL,?V0
    \   000110   85..83       MOV       DPH,?V1
-   \   000113   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_29:
+   \   000113   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_27:
    \   000116   EA           MOV       A,R2
    \   000117   4B           ORL       A,R3
    \   000118   6003         JZ        ??zclSampleSw_ProcessIncomingMsg_13
@@ -1473,11 +1473,11 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \                     ?Subroutine12:
    \   000000   85..82       MOV       DPL,?V0
    \   000003   85..83       MOV       DPH,?V1
-   \   000006                REQUIRE ??Subroutine20_0
-   \   000006                ; // Fall through to label ??Subroutine20_0
+   \   000006                REQUIRE ??Subroutine21_0
+   \   000006                ; // Fall through to label ??Subroutine21_0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine20_0:
+   \                     ??Subroutine21_0:
    \   000000   E0           MOVX      A,@DPTR
    \   000001   F8           MOV       R0,A
    \   000002   A3           INC       DPTR
@@ -1487,16 +1487,7 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000007   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine11:
-   \   000000   E0           MOVX      A,@DPTR
-   \   000001   FA           MOV       R2,A
-   \   000002   A3           INC       DPTR
-   \   000003   E0           MOVX      A,@DPTR
-   \   000004   FB           MOV       R3,A
-   \   000005   22           RET
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine17:
+   \                     ?Subroutine18:
    \   000000   E0           MOVX      A,@DPTR
    \   000001   F8           MOV       R0,A
    \   000002   A3           INC       DPTR
@@ -1504,6 +1495,15 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000004   F583         MOV       DPH,A
    \   000006   8882         MOV       DPL,R0
    \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine10:
+   \   000000   E0           MOVX      A,@DPTR
+   \   000001   FA           MOV       R2,A
+   \   000002   A3           INC       DPTR
+   \   000003   E0           MOVX      A,@DPTR
+   \   000004   FB           MOV       R3,A
+   \   000005   22           RET
     633          
     634          #ifdef ZCL_READ
     635          /*********************************************************************
@@ -1612,9 +1612,9 @@ C:\Texas Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitc
    \   000009   E4           CLR       A
    \   00000A   3B           ADDC      A,R3
    \   00000B   F583         MOV       DPH,A
-   \   00000D   12....       LCALL     ??Subroutine20_0 & 0xFFFF
+   \   00000D   12....       LCALL     ??Subroutine21_0 & 0xFFFF
     728            for ( i = 0; i < discoverRspCmd->numCmd; i++ )
-   \                     ??CrossCallReturnLabel_61:
+   \                     ??CrossCallReturnLabel_63:
    \   000010   8001         SJMP      ??zclSampleSw_ProcessInDiscCmdsRspCmd_0
    \                     ??zclSampleSw_ProcessInDiscCmdsRspCmd_1:
    \   000012   0A           INC       R2
@@ -2320,7 +2320,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    1088                destAddr.endPoint = SAMPLESW_ENDPOINT;
    \   000012   7409         MOV       A,#0x9
    \   000014   12....       LCALL     ?XSTACK_DISP0_8
-   \   000017   7408         MOV       A,#0x8
+   \   000017   7403         MOV       A,#0x3
    \   000019   F0           MOVX      @DPTR,A
    1089                destAddr.addr.shortAddr = 0x0000;
    \   00001A   85..82       MOV       DPL,?XSP + 0
@@ -2351,9 +2351,9 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   000039                ; Setup parameters for call to function osal_mem_alloc
    \   000039   12....       LCALL     ?Subroutine15 & 0xFFFF
    \                     ??CrossCallReturnLabel_51:
-   \   00003C   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   \   00003C   12....       LCALL     ??Subroutine23_0 & 0xFFFF
    1097                if(reportCmd->attrList[0].attrData == NULL)
-   \                     ??CrossCallReturnLabel_80:
+   \                     ??CrossCallReturnLabel_82:
    \   00003F   7003         JNZ       $+5
    \   000041   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1098                  return;
@@ -2367,9 +2367,9 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   000049   A3           INC       DPTR
    \   00004A   A3           INC       DPTR
    \   00004B   A3           INC       DPTR
-   \   00004C   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   \   00004C   12....       LCALL     ??Subroutine23_0 & 0xFFFF
    1101                if(reportCmd->attrList[1].attrData == NULL)
-   \                     ??CrossCallReturnLabel_81:
+   \                     ??CrossCallReturnLabel_83:
    \   00004F   7003         JNZ       $+5
    \   000051   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1102                  return;
@@ -2386,7 +2386,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   00005F   85..82       MOV       DPL,?V14
    \   000062   12....       LCALL     ?Subroutine2 & 0xFFFF
    1105                if(reportCmd->attrList[2].attrData == NULL)
-   \                     ??CrossCallReturnLabel_73:
+   \                     ??CrossCallReturnLabel_75:
    \   000065   7003         JNZ       $+5
    \   000067   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1106                  return;
@@ -2403,7 +2403,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   000075   85..82       MOV       DPL,?V10
    \   000078   12....       LCALL     ?Subroutine2 & 0xFFFF
    1109                if(reportCmd->attrList[3].attrData == NULL)
-   \                     ??CrossCallReturnLabel_74:
+   \                     ??CrossCallReturnLabel_76:
    \   00007B   7003         JNZ       $+5
    \   00007D   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1110                  return;
@@ -2420,7 +2420,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   00008B   85..82       MOV       DPL,?V8
    \   00008E   12....       LCALL     ?Subroutine2 & 0xFFFF
    1113                if(reportCmd->attrList[4].attrData == NULL)
-   \                     ??CrossCallReturnLabel_75:
+   \                     ??CrossCallReturnLabel_77:
    \   000091   7003         JNZ       $+5
    \   000093   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1114                  return;
@@ -2437,7 +2437,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   0000A1   85..82       MOV       DPL,?V6
    \   0000A4   12....       LCALL     ?Subroutine2 & 0xFFFF
    1117                if(reportCmd->attrList[5].attrData == NULL)
-   \                     ??CrossCallReturnLabel_76:
+   \                     ??CrossCallReturnLabel_78:
    \   0000A7   7003         JNZ       $+5
    \   0000A9   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1118                  return;
@@ -2454,7 +2454,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   0000B7   85..82       MOV       DPL,?V4
    \   0000BA   12....       LCALL     ?Subroutine2 & 0xFFFF
    1121                if(reportCmd->attrList[6].attrData == NULL)
-   \                     ??CrossCallReturnLabel_77:
+   \                     ??CrossCallReturnLabel_79:
    \   0000BD   7003         JNZ       $+5
    \   0000BF   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1122                  return;
@@ -2471,7 +2471,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   0000CD   85..82       MOV       DPL,?V2
    \   0000D0   12....       LCALL     ?Subroutine2 & 0xFFFF
    1125                if(reportCmd->attrList[7].attrData == NULL)
-   \                     ??CrossCallReturnLabel_78:
+   \                     ??CrossCallReturnLabel_80:
    \   0000D3   7003         JNZ       $+5
    \   0000D5   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1126                  return;
@@ -2488,7 +2488,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   0000E3   85..82       MOV       DPL,?V0
    \   0000E6   12....       LCALL     ?Subroutine2 & 0xFFFF
    1129                if(reportCmd->attrList[8].attrData == NULL)
-   \                     ??CrossCallReturnLabel_79:
+   \                     ??CrossCallReturnLabel_81:
    \   0000E9   7003         JNZ       $+5
    \   0000EB   02....       LJMP      ??zclSampleSw_ReportTest_0 & 0xFFFF
    1130                  return;
@@ -2514,213 +2514,175 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    1143                uint16 temp_CO2;
    1144                uint16 temp_O2;
    1145                */
-   1146                reportCmd->numAttr = 9;
+   1146                reportCmd->numAttr = 9;//9
    \                     ??zclSampleSw_ReportTest_1:
    \   0000F9   8E82         MOV       DPL,R6
    \   0000FB   8F83         MOV       DPH,R7
    \   0000FD   7409         MOV       A,#0x9
    \   0000FF   F0           MOVX      @DPTR,A
-   1147                reportCmd->attrList[0].attrID = 0x0001;
+   1147                reportCmd->attrList[0].attrID = 0x0000;
    \   000100   A3           INC       DPTR
-   \   000101   7401         MOV       A,#0x1
-   \   000103   12....       LCALL     ?Subroutine5 & 0xFFFF
-   1148                reportCmd->attrList[0].dataType = ZCL_DATATYPE_ENUM16;
-   \                     ??CrossCallReturnLabel_14:
-   \   000106   7431         MOV       A,#0x31
-   \   000108   F0           MOVX      @DPTR,A
+   \   000101   E4           CLR       A
+   \   000102   F0           MOVX      @DPTR,A
+   \   000103   A3           INC       DPTR
+   \   000104   12....       LCALL     ?Subroutine17 & 0xFFFF
+   1148                reportCmd->attrList[0].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_55:
+   \   000107   7429         MOV       A,#0x29
+   \   000109   F0           MOVX      @DPTR,A
    1149                *((uint16 *)(reportCmd->attrList[0].attrData)) = temp_VOC;
-   \   000109   90....       MOV       DPTR,#temp_VOC
-   \   00010C   12....       LCALL     ?Subroutine10 & 0xFFFF
-   \                     ??CrossCallReturnLabel_27:
-   \   00010F   12....       LCALL     ?Subroutine9 & 0xFFFF
-   1150                
-   1151                reportCmd->attrList[1].attrID = 0x0002;
+   \   00010A   90....       MOV       DPTR,#temp_VOC
+   \   00010D   12....       LCALL     ?Subroutine9 & 0xFFFF
    \                     ??CrossCallReturnLabel_25:
-   \   000112   8E82         MOV       DPL,R6
-   \   000114   8F83         MOV       DPH,R7
-   \   000116   A3           INC       DPTR
-   \   000117   A3           INC       DPTR
+   \   000110   12....       LCALL     ?Subroutine11 & 0xFFFF
+   \                     ??CrossCallReturnLabel_35:
+   \   000113   12....       LCALL     ?Subroutine4 & 0xFFFF
+   1150                
+   1151                reportCmd->attrList[1].attrID = 0x0000;
+   \                     ??CrossCallReturnLabel_7:
+   \   000116   E4           CLR       A
+   \   000117   F0           MOVX      @DPTR,A
    \   000118   A3           INC       DPTR
-   \   000119   A3           INC       DPTR
-   \   00011A   A3           INC       DPTR
-   \   00011B   A3           INC       DPTR
-   \   00011C   7402         MOV       A,#0x2
-   \   00011E   12....       LCALL     ?Subroutine5 & 0xFFFF
-   1152                reportCmd->attrList[1].dataType = ZCL_DATATYPE_ENUM16;
-   \                     ??CrossCallReturnLabel_15:
-   \   000121   A3           INC       DPTR
-   \   000122   A3           INC       DPTR
-   \   000123   A3           INC       DPTR
-   \   000124   A3           INC       DPTR
-   \   000125   A3           INC       DPTR
-   \   000126   7431         MOV       A,#0x31
-   \   000128   F0           MOVX      @DPTR,A
+   \   000119   12....       LCALL     ?Subroutine4 & 0xFFFF
+   1152                reportCmd->attrList[1].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_8:
+   \   00011C   A3           INC       DPTR
+   \   00011D   A3           INC       DPTR
+   \   00011E   7429         MOV       A,#0x29
+   \   000120   F0           MOVX      @DPTR,A
    1153                *((uint16 *)(reportCmd->attrList[1].attrData)) = temp_O3;
-   \   000129   90....       MOV       DPTR,#temp_O3
-   \   00012C   12....       LCALL     ?Subroutine10 & 0xFFFF
-   \                     ??CrossCallReturnLabel_28:
-   \   00012F   A3           INC       DPTR
-   \   000130   A3           INC       DPTR
-   \   000131   A3           INC       DPTR
-   \   000132   A3           INC       DPTR
-   \   000133   A3           INC       DPTR
-   \   000134   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   000121   90....       MOV       DPTR,#temp_O3
+   \   000124   12....       LCALL     ?Subroutine9 & 0xFFFF
+   \                     ??CrossCallReturnLabel_26:
+   \   000127   A3           INC       DPTR
+   \   000128   A3           INC       DPTR
+   \   000129   A3           INC       DPTR
+   \   00012A   A3           INC       DPTR
+   \   00012B   A3           INC       DPTR
+   \   00012C   12....       LCALL     ?Subroutine3 & 0xFFFF
    1154                
    1155                      
-   1156                reportCmd->attrList[2].attrID = 0x0003;
-   \                     ??CrossCallReturnLabel_7:
-   \   000137   240B         ADD       A,#0xb
-   \   000139   F582         MOV       DPL,A
-   \   00013B   E4           CLR       A
-   \   00013C   3F           ADDC      A,R7
-   \   00013D   F583         MOV       DPH,A
-   \   00013F   7403         MOV       A,#0x3
-   \   000141   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1157                reportCmd->attrList[2].dataType = ZCL_DATATYPE_ENUM16;
+   1156                reportCmd->attrList[2].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_0:
-   \   000144   240D         ADD       A,#0xd
-   \   000146   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   00012F   240B         ADD       A,#0xb
+   \   000131   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1157                reportCmd->attrList[2].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_9:
+   \   000134   240D         ADD       A,#0xd
+   \   000136   12....       LCALL     ?Subroutine14 & 0xFFFF
    1158                *((uint16 *)(reportCmd->attrList[2].attrData)) = temp_CHO2;
    \                     ??CrossCallReturnLabel_44:
-   \   000149   90....       MOV       DPTR,#temp_CHO2
-   \   00014C   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_30:
-   \   00014F   85..82       MOV       DPL,?V14
-   \   000152   85..83       MOV       DPH,?V15
-   \   000155   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   000139   90....       MOV       DPTR,#temp_CHO2
+   \   00013C   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_28:
+   \   00013F   85..82       MOV       DPL,?V14
+   \   000142   85..83       MOV       DPH,?V15
+   \   000145   12....       LCALL     ?Subroutine3 & 0xFFFF
    1159                
    1160                            
-   1161                reportCmd->attrList[3].attrID = 0x0004;
-   \                     ??CrossCallReturnLabel_8:
-   \   000158   2410         ADD       A,#0x10
-   \   00015A   F582         MOV       DPL,A
-   \   00015C   E4           CLR       A
-   \   00015D   3F           ADDC      A,R7
-   \   00015E   F583         MOV       DPH,A
-   \   000160   7404         MOV       A,#0x4
-   \   000162   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1162                reportCmd->attrList[3].dataType = ZCL_DATATYPE_ENUM16;
+   1161                reportCmd->attrList[3].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_1:
-   \   000165   2412         ADD       A,#0x12
-   \   000167   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   000148   2410         ADD       A,#0x10
+   \   00014A   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1162                reportCmd->attrList[3].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_10:
+   \   00014D   2412         ADD       A,#0x12
+   \   00014F   12....       LCALL     ?Subroutine14 & 0xFFFF
    1163                *((uint16 *)(reportCmd->attrList[3].attrData)) = temp_CO;
    \                     ??CrossCallReturnLabel_45:
-   \   00016A   90....       MOV       DPTR,#temp_CO
-   \   00016D   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_31:
-   \   000170   85..82       MOV       DPL,?V10
-   \   000173   85..83       MOV       DPH,?V11
-   \   000176   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   000152   90....       MOV       DPTR,#temp_CO
+   \   000155   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_29:
+   \   000158   85..82       MOV       DPL,?V10
+   \   00015B   85..83       MOV       DPH,?V11
+   \   00015E   12....       LCALL     ?Subroutine3 & 0xFFFF
    1164                            
-   1165                reportCmd->attrList[4].attrID = 0x0005;
-   \                     ??CrossCallReturnLabel_9:
-   \   000179   2415         ADD       A,#0x15
-   \   00017B   F582         MOV       DPL,A
-   \   00017D   E4           CLR       A
-   \   00017E   3F           ADDC      A,R7
-   \   00017F   F583         MOV       DPH,A
-   \   000181   7405         MOV       A,#0x5
-   \   000183   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1166                reportCmd->attrList[4].dataType = ZCL_DATATYPE_ENUM16;
+   1165                reportCmd->attrList[4].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_2:
-   \   000186   2417         ADD       A,#0x17
-   \   000188   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   000161   2415         ADD       A,#0x15
+   \   000163   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1166                reportCmd->attrList[4].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_11:
+   \   000166   2417         ADD       A,#0x17
+   \   000168   12....       LCALL     ?Subroutine14 & 0xFFFF
    1167                *((uint16 *)(reportCmd->attrList[4].attrData)) = temp_HUMIDITY;
    \                     ??CrossCallReturnLabel_46:
-   \   00018B   90....       MOV       DPTR,#temp_HUMIDITY
-   \   00018E   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_32:
-   \   000191   85..82       MOV       DPL,?V8
-   \   000194   85..83       MOV       DPH,?V9
-   \   000197   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   00016B   90....       MOV       DPTR,#temp_HUMIDITY
+   \   00016E   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_30:
+   \   000171   85..82       MOV       DPL,?V8
+   \   000174   85..83       MOV       DPH,?V9
+   \   000177   12....       LCALL     ?Subroutine3 & 0xFFFF
    1168                            
-   1169                reportCmd->attrList[5].attrID = 0x0006;
-   \                     ??CrossCallReturnLabel_10:
-   \   00019A   241A         ADD       A,#0x1a
-   \   00019C   F582         MOV       DPL,A
-   \   00019E   E4           CLR       A
-   \   00019F   3F           ADDC      A,R7
-   \   0001A0   F583         MOV       DPH,A
-   \   0001A2   7406         MOV       A,#0x6
-   \   0001A4   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1170                reportCmd->attrList[5].dataType = ZCL_DATATYPE_ENUM16;
+   1169                reportCmd->attrList[5].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_3:
-   \   0001A7   241C         ADD       A,#0x1c
-   \   0001A9   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   00017A   241A         ADD       A,#0x1a
+   \   00017C   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1170                reportCmd->attrList[5].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_12:
+   \   00017F   241C         ADD       A,#0x1c
+   \   000181   12....       LCALL     ?Subroutine14 & 0xFFFF
    1171                *((uint16 *)(reportCmd->attrList[5].attrData)) = temp_TEMPERATURE;
    \                     ??CrossCallReturnLabel_47:
-   \   0001AC   90....       MOV       DPTR,#temp_TEMPERATURE
-   \   0001AF   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_33:
-   \   0001B2   85..82       MOV       DPL,?V6
-   \   0001B5   85..83       MOV       DPH,?V7
-   \   0001B8   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   000184   90....       MOV       DPTR,#temp_TEMPERATURE
+   \   000187   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_31:
+   \   00018A   85..82       MOV       DPL,?V6
+   \   00018D   85..83       MOV       DPH,?V7
+   \   000190   12....       LCALL     ?Subroutine3 & 0xFFFF
    1172                            
-   1173                reportCmd->attrList[6].attrID = 0x0007;
-   \                     ??CrossCallReturnLabel_11:
-   \   0001BB   241F         ADD       A,#0x1f
-   \   0001BD   F582         MOV       DPL,A
-   \   0001BF   E4           CLR       A
-   \   0001C0   3F           ADDC      A,R7
-   \   0001C1   F583         MOV       DPH,A
-   \   0001C3   7407         MOV       A,#0x7
-   \   0001C5   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1174                reportCmd->attrList[6].dataType = ZCL_DATATYPE_ENUM16;
+   1173                reportCmd->attrList[6].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_4:
-   \   0001C8   2421         ADD       A,#0x21
-   \   0001CA   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   000193   241F         ADD       A,#0x1f
+   \   000195   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1174                reportCmd->attrList[6].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_13:
+   \   000198   2421         ADD       A,#0x21
+   \   00019A   12....       LCALL     ?Subroutine14 & 0xFFFF
    1175                *((uint16 *)(reportCmd->attrList[6].attrData)) = temp_PM25;
    \                     ??CrossCallReturnLabel_48:
-   \   0001CD   90....       MOV       DPTR,#temp_PM25
-   \   0001D0   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_34:
-   \   0001D3   85..82       MOV       DPL,?V4
-   \   0001D6   85..83       MOV       DPH,?V5
-   \   0001D9   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   00019D   90....       MOV       DPTR,#temp_PM25
+   \   0001A0   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_32:
+   \   0001A3   85..82       MOV       DPL,?V4
+   \   0001A6   85..83       MOV       DPH,?V5
+   \   0001A9   12....       LCALL     ?Subroutine3 & 0xFFFF
    1176                            
-   1177                reportCmd->attrList[7].attrID = 0x0008;
-   \                     ??CrossCallReturnLabel_12:
-   \   0001DC   2424         ADD       A,#0x24
-   \   0001DE   F582         MOV       DPL,A
-   \   0001E0   E4           CLR       A
-   \   0001E1   3F           ADDC      A,R7
-   \   0001E2   F583         MOV       DPH,A
-   \   0001E4   7408         MOV       A,#0x8
-   \   0001E6   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1178                reportCmd->attrList[7].dataType = ZCL_DATATYPE_ENUM16;
+   1177                reportCmd->attrList[7].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_5:
-   \   0001E9   2426         ADD       A,#0x26
-   \   0001EB   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   0001AC   2424         ADD       A,#0x24
+   \   0001AE   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1178                reportCmd->attrList[7].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_14:
+   \   0001B1   2426         ADD       A,#0x26
+   \   0001B3   12....       LCALL     ?Subroutine14 & 0xFFFF
    1179                *((uint16 *)(reportCmd->attrList[7].attrData)) = temp_CO2;
    \                     ??CrossCallReturnLabel_49:
-   \   0001EE   90....       MOV       DPTR,#temp_CO2
-   \   0001F1   12....       LCALL     ?Subroutine11 & 0xFFFF
-   \                     ??CrossCallReturnLabel_35:
-   \   0001F4   85..82       MOV       DPL,?V2
-   \   0001F7   85..83       MOV       DPH,?V3
-   \   0001FA   12....       LCALL     ?Subroutine4 & 0xFFFF
+   \   0001B6   90....       MOV       DPTR,#temp_CO2
+   \   0001B9   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_33:
+   \   0001BC   85..82       MOV       DPL,?V2
+   \   0001BF   85..83       MOV       DPH,?V3
+   \   0001C2   12....       LCALL     ?Subroutine3 & 0xFFFF
    1180                            
-   1181                reportCmd->attrList[8].attrID = 0x0009;
-   \                     ??CrossCallReturnLabel_13:
-   \   0001FD   2429         ADD       A,#0x29
-   \   0001FF   F582         MOV       DPL,A
-   \   000201   E4           CLR       A
-   \   000202   3F           ADDC      A,R7
-   \   000203   F583         MOV       DPH,A
-   \   000205   7409         MOV       A,#0x9
-   \   000207   12....       LCALL     ?Subroutine3 & 0xFFFF
-   1182                reportCmd->attrList[8].dataType = ZCL_DATATYPE_ENUM16;
+   1181                reportCmd->attrList[8].attrID = 0x0000;
    \                     ??CrossCallReturnLabel_6:
-   \   00020A   242B         ADD       A,#0x2b
-   \   00020C   12....       LCALL     ?Subroutine14 & 0xFFFF
+   \   0001C5   2429         ADD       A,#0x29
+   \   0001C7   12....       LCALL     ?Subroutine5 & 0xFFFF
+   1182                reportCmd->attrList[8].dataType = ZCL_DATATYPE_INT16;
+   \                     ??CrossCallReturnLabel_15:
+   \   0001CA   242B         ADD       A,#0x2b
+   \   0001CC   12....       LCALL     ?Subroutine14 & 0xFFFF
    1183                *((uint16 *)(reportCmd->attrList[8].attrData)) = temp_O2;
    \                     ??CrossCallReturnLabel_50:
-   \   00020F   90....       MOV       DPTR,#temp_O2
-   \   000212   12....       LCALL     ?Subroutine11 & 0xFFFF
+   \   0001CF   90....       MOV       DPTR,#temp_O2
+   \   0001D2   12....       LCALL     ?Subroutine10 & 0xFFFF
+   \                     ??CrossCallReturnLabel_34:
+   \   0001D5   85..82       MOV       DPL,?V0
+   \   0001D8   85..83       MOV       DPH,?V1
+   \   0001DB   12....       LCALL     ?Subroutine11 & 0xFFFF
    \                     ??CrossCallReturnLabel_36:
-   \   000215   85..82       MOV       DPL,?V0
-   \   000218   85..83       MOV       DPH,?V1
-   \   00021B   12....       LCALL     ?Subroutine9 & 0xFFFF
+   \   0001DE   F0           MOVX      @DPTR,A
    1184                //strcpy((char *)reportCmd->attrList[0].attrData,(char const *)temp_VOC);  //字符串数据
    1185                //reportCmd->attrList[1].attrID = ATTRID_ON_OFF_SWITCH_TYPE;
    1186                //reportCmd->attrList[1].dataType = ZCL_DATATYPE_ENUM16;
@@ -2729,168 +2691,169 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    1189                                   &destAddr,
    1190                                   //ZCL_CLUSTER_ID_GEN_ON_OFF_SWITCH_CONFIG, 
    1191                                   ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT,
-   1192                                   reportCmd,
-   1193                                   ZCL_FRAME_CLIENT_SERVER_DIR, 
-   1194                                   TRUE, 
-   1195                                   seqNum++ );
-   \                     ??CrossCallReturnLabel_26:
-   \   00021E   90....       MOV       DPTR,#??seqNum
-   \   000221   E0           MOVX      A,@DPTR
-   \   000222   F8           MOV       R0,A
-   \   000223   7401         MOV       A,#0x1
-   \   000225   28           ADD       A,R0
-   \   000226   F0           MOVX      @DPTR,A
-   \   000227                ; Setup parameters for call to function zcl_SendReportCmd
-   \   000227   E8           MOV       A,R0
-   \   000228   F5..         MOV       ?V12,A
-   \   00022A   78..         MOV       R0,#?V12
-   \   00022C   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00022F   75..01       MOV       ?V12,#0x1
-   \   000232   78..         MOV       R0,#?V12
-   \   000234   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   000237   75..00       MOV       ?V12,#0x0
-   \   00023A   78..         MOV       R0,#?V12
-   \   00023C   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   00023F   8E..         MOV       ?V12,R6
-   \   000241   8F..         MOV       ?V13,R7
-   \   000243   78..         MOV       R0,#?V12
-   \   000245   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   000248   7C02         MOV       R4,#0x2
-   \   00024A   7D04         MOV       R5,#0x4
-   \   00024C   7405         MOV       A,#0x5
-   \   00024E   12....       LCALL     ?XSTACK_DISP101_8
-   \   000251   7908         MOV       R1,#0x8
-   \   000253   12....       LCALL     `??zcl_SendReportCmd::?relay`; Banked call to: zcl_SendReportCmd
-   \   000256   7405         MOV       A,#0x5
-   \   000258   12....       LCALL     ?DEALLOC_XSTACK8
-   1196                
-   1197                HalLcdWriteStringValue("SendData: ", (seqNum-1), 10, 4);
-   \   00025B                ; Setup parameters for call to function HalLcdWriteStringValue
-   \   00025B   75..04       MOV       ?V12,#0x4
-   \   00025E   78..         MOV       R0,#?V12
-   \   000260   12....       LCALL     ?PUSH_XSTACK_I_ONE
-   \   000263   790A         MOV       R1,#0xa
-   \   000265   90....       MOV       DPTR,#??seqNum
-   \   000268   E0           MOVX      A,@DPTR
-   \   000269   24FF         ADD       A,#-0x1
-   \   00026B   FC           MOV       R4,A
-   \   00026C   E4           CLR       A
-   \   00026D   34FF         ADDC      A,#-0x1
-   \   00026F   FD           MOV       R5,A
-   \   000270   7A..         MOV       R2,#`?<Constant "SendData: ">` & 0xff
-   \   000272   7B..         MOV       R3,#(`?<Constant "SendData: ">` >> 8) & 0xff
-   \   000274   12....       LCALL     `??HalLcdWriteStringValue::?relay`; Banked call to: HalLcdWriteStringValue
-   \   000277   7401         MOV       A,#0x1
-   \   000279   12....       LCALL     ?DEALLOC_XSTACK8
-   1198                sprintf(seqNumstr,"%d\r\n",seqNum);
-   \   00027C                ; Setup parameters for call to function sprintf
-   \   00027C   90....       MOV       DPTR,#??seqNum
-   \   00027F   E0           MOVX      A,@DPTR
-   \   000280   F5..         MOV       ?V12,A
-   \   000282   75..00       MOV       ?V13,#0x0
-   \   000285   78..         MOV       R0,#?V12
-   \   000287   12....       LCALL     ?PUSH_XSTACK_I_TWO
-   \   00028A   7C..         MOV       R4,#`?<Constant "%d\\r\\n">` & 0xff
-   \   00028C   7D..         MOV       R5,#(`?<Constant "%d\\r\\n">` >> 8) & 0xff
-   \   00028E   740E         MOV       A,#0xe
-   \   000290   12....       LCALL     ?XSTACK_DISP101_8
-   \   000293   12....       LCALL     `??sprintf::?relay`; Banked call to: sprintf
-   \   000296   7402         MOV       A,#0x2
-   \   000298   12....       LCALL     ?DEALLOC_XSTACK8
-   1199                HalUARTWrite(HAL_UART_PORT_0 ,  "TX seqNum:" , 10);
-   \   00029B                ; Setup parameters for call to function HalUARTWrite
-   \   00029B   7C0A         MOV       R4,#0xa
-   \   00029D   7D00         MOV       R5,#0x0
-   \   00029F   7A..         MOV       R2,#`?<Constant "TX seqNum:">` & 0xff
-   \   0002A1   7B..         MOV       R3,#(`?<Constant "TX seqNum:">` >> 8) & 0xff
-   \   0002A3   7900         MOV       R1,#0x0
-   \   0002A5   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
-   1200                HalUARTWrite(HAL_UART_PORT_0 , (uint8 *)seqNumstr , osal_strlen(seqNumstr));
-   \   0002A8                ; Setup parameters for call to function osal_strlen
-   \   0002A8   740C         MOV       A,#0xc
-   \   0002AA   12....       LCALL     ?XSTACK_DISP101_8
-   \   0002AD   12....       LCALL     `??osal_strlen::?relay`; Banked call to: osal_strlen
-   \   0002B0   8A..         MOV       ?V12,R2
-   \   0002B2   8B..         MOV       ?V13,R3
-   \   0002B4   AC..         MOV       R4,?V12
-   \   0002B6   AD..         MOV       R5,?V13
-   \   0002B8                ; Setup parameters for call to function HalUARTWrite
-   \   0002B8   740C         MOV       A,#0xc
-   \   0002BA   12....       LCALL     ?XSTACK_DISP101_8
-   \   0002BD   7900         MOV       R1,#0x0
-   \   0002BF   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
-   1201                osal_mem_free(reportCmd->attrList[0].attrData);
-   \   0002C2                ; Setup parameters for call to function osal_mem_free
-   \   0002C2   8E82         MOV       DPL,R6
-   \   0002C4   8F83         MOV       DPH,R7
-   \   0002C6   12....       LCALL     ?Subroutine7 & 0xFFFF
-   1202                osal_mem_free(reportCmd->attrList[1].attrData);
-   \                     ??CrossCallReturnLabel_64:
-   \   0002C9                ; Setup parameters for call to function osal_mem_free
-   \   0002C9   8E82         MOV       DPL,R6
-   \   0002CB   8F83         MOV       DPH,R7
-   \   0002CD   A3           INC       DPTR
-   \   0002CE   A3           INC       DPTR
-   \   0002CF   A3           INC       DPTR
-   \   0002D0   A3           INC       DPTR
-   \   0002D1   A3           INC       DPTR
-   \   0002D2   12....       LCALL     ?Subroutine7 & 0xFFFF
-   1203                osal_mem_free(reportCmd->attrList[2].attrData);
-   \                     ??CrossCallReturnLabel_65:
-   \   0002D5                ; Setup parameters for call to function osal_mem_free
-   \   0002D5   85..82       MOV       DPL,?V14
-   \   0002D8   85..83       MOV       DPH,?V15
-   \   0002DB   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1204                osal_mem_free(reportCmd->attrList[3].attrData);
+   1192                                   //ZCL_CLUSTER_ID_GEN_MULTISTATE_OUTPUT_BASIC,
+   1193                                   reportCmd,
+   1194                                   ZCL_FRAME_SERVER_CLIENT_DIR, //2022612会导致解析不出来
+   1195                                   //TRUE,
+   1196                                   FALSE,
+   1197                                   seqNum++ );
+   \   0001DF   90....       MOV       DPTR,#??seqNum
+   \   0001E2   E0           MOVX      A,@DPTR
+   \   0001E3   F8           MOV       R0,A
+   \   0001E4   7401         MOV       A,#0x1
+   \   0001E6   28           ADD       A,R0
+   \   0001E7   F0           MOVX      @DPTR,A
+   \   0001E8                ; Setup parameters for call to function zcl_SendReportCmd
+   \   0001E8   E8           MOV       A,R0
+   \   0001E9   F5..         MOV       ?V12,A
+   \   0001EB   78..         MOV       R0,#?V12
+   \   0001ED   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   0001F0   75..00       MOV       ?V12,#0x0
+   \   0001F3   78..         MOV       R0,#?V12
+   \   0001F5   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   0001F8   75..01       MOV       ?V12,#0x1
+   \   0001FB   78..         MOV       R0,#?V12
+   \   0001FD   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000200   8E..         MOV       ?V12,R6
+   \   000202   8F..         MOV       ?V13,R7
+   \   000204   78..         MOV       R0,#?V12
+   \   000206   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   000209   7C02         MOV       R4,#0x2
+   \   00020B   7D04         MOV       R5,#0x4
+   \   00020D   7405         MOV       A,#0x5
+   \   00020F   12....       LCALL     ?XSTACK_DISP101_8
+   \   000212   7903         MOV       R1,#0x3
+   \   000214   12....       LCALL     `??zcl_SendReportCmd::?relay`; Banked call to: zcl_SendReportCmd
+   \   000217   7405         MOV       A,#0x5
+   \   000219   12....       LCALL     ?DEALLOC_XSTACK8
+   1198                
+   1199                HalLcdWriteStringValue("SendData: ", (seqNum-1), 10, 4);
+   \   00021C                ; Setup parameters for call to function HalLcdWriteStringValue
+   \   00021C   75..04       MOV       ?V12,#0x4
+   \   00021F   78..         MOV       R0,#?V12
+   \   000221   12....       LCALL     ?PUSH_XSTACK_I_ONE
+   \   000224   790A         MOV       R1,#0xa
+   \   000226   90....       MOV       DPTR,#??seqNum
+   \   000229   E0           MOVX      A,@DPTR
+   \   00022A   24FF         ADD       A,#-0x1
+   \   00022C   FC           MOV       R4,A
+   \   00022D   E4           CLR       A
+   \   00022E   34FF         ADDC      A,#-0x1
+   \   000230   FD           MOV       R5,A
+   \   000231   7A..         MOV       R2,#`?<Constant "SendData: ">` & 0xff
+   \   000233   7B..         MOV       R3,#(`?<Constant "SendData: ">` >> 8) & 0xff
+   \   000235   12....       LCALL     `??HalLcdWriteStringValue::?relay`; Banked call to: HalLcdWriteStringValue
+   \   000238   7401         MOV       A,#0x1
+   \   00023A   12....       LCALL     ?DEALLOC_XSTACK8
+   1200                sprintf(seqNumstr,"%d\r\n",seqNum);
+   \   00023D                ; Setup parameters for call to function sprintf
+   \   00023D   90....       MOV       DPTR,#??seqNum
+   \   000240   E0           MOVX      A,@DPTR
+   \   000241   F5..         MOV       ?V12,A
+   \   000243   75..00       MOV       ?V13,#0x0
+   \   000246   78..         MOV       R0,#?V12
+   \   000248   12....       LCALL     ?PUSH_XSTACK_I_TWO
+   \   00024B   7C..         MOV       R4,#`?<Constant "%d\\r\\n">` & 0xff
+   \   00024D   7D..         MOV       R5,#(`?<Constant "%d\\r\\n">` >> 8) & 0xff
+   \   00024F   740E         MOV       A,#0xe
+   \   000251   12....       LCALL     ?XSTACK_DISP101_8
+   \   000254   12....       LCALL     `??sprintf::?relay`; Banked call to: sprintf
+   \   000257   7402         MOV       A,#0x2
+   \   000259   12....       LCALL     ?DEALLOC_XSTACK8
+   1201                HalUARTWrite(HAL_UART_PORT_0 ,  "TX seqNum:" , 10);
+   \   00025C                ; Setup parameters for call to function HalUARTWrite
+   \   00025C   7C0A         MOV       R4,#0xa
+   \   00025E   7D00         MOV       R5,#0x0
+   \   000260   7A..         MOV       R2,#`?<Constant "TX seqNum:">` & 0xff
+   \   000262   7B..         MOV       R3,#(`?<Constant "TX seqNum:">` >> 8) & 0xff
+   \   000264   7900         MOV       R1,#0x0
+   \   000266   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+   1202                HalUARTWrite(HAL_UART_PORT_0 , (uint8 *)seqNumstr , osal_strlen(seqNumstr));
+   \   000269                ; Setup parameters for call to function osal_strlen
+   \   000269   740C         MOV       A,#0xc
+   \   00026B   12....       LCALL     ?XSTACK_DISP101_8
+   \   00026E   12....       LCALL     `??osal_strlen::?relay`; Banked call to: osal_strlen
+   \   000271   8A..         MOV       ?V12,R2
+   \   000273   8B..         MOV       ?V13,R3
+   \   000275   AC..         MOV       R4,?V12
+   \   000277   AD..         MOV       R5,?V13
+   \   000279                ; Setup parameters for call to function HalUARTWrite
+   \   000279   740C         MOV       A,#0xc
+   \   00027B   12....       LCALL     ?XSTACK_DISP101_8
+   \   00027E   7900         MOV       R1,#0x0
+   \   000280   12....       LCALL     `??HalUARTWrite::?relay`; Banked call to: HalUARTWrite
+   1203                osal_mem_free(reportCmd->attrList[0].attrData);
+   \   000283                ; Setup parameters for call to function osal_mem_free
+   \   000283   8E82         MOV       DPL,R6
+   \   000285   8F83         MOV       DPH,R7
+   \   000287   12....       LCALL     ?Subroutine7 & 0xFFFF
+   1204                osal_mem_free(reportCmd->attrList[1].attrData);
    \                     ??CrossCallReturnLabel_66:
-   \   0002DE                ; Setup parameters for call to function osal_mem_free
-   \   0002DE   85..82       MOV       DPL,?V10
-   \   0002E1   85..83       MOV       DPH,?V11
-   \   0002E4   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1205                osal_mem_free(reportCmd->attrList[4].attrData);
+   \   00028A                ; Setup parameters for call to function osal_mem_free
+   \   00028A   8E82         MOV       DPL,R6
+   \   00028C   8F83         MOV       DPH,R7
+   \   00028E   A3           INC       DPTR
+   \   00028F   A3           INC       DPTR
+   \   000290   A3           INC       DPTR
+   \   000291   A3           INC       DPTR
+   \   000292   A3           INC       DPTR
+   \   000293   12....       LCALL     ?Subroutine7 & 0xFFFF
+   1205                osal_mem_free(reportCmd->attrList[2].attrData);
    \                     ??CrossCallReturnLabel_67:
-   \   0002E7                ; Setup parameters for call to function osal_mem_free
-   \   0002E7   85..82       MOV       DPL,?V8
-   \   0002EA   85..83       MOV       DPH,?V9
-   \   0002ED   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1206                osal_mem_free(reportCmd->attrList[5].attrData);
+   \   000296                ; Setup parameters for call to function osal_mem_free
+   \   000296   85..82       MOV       DPL,?V14
+   \   000299   85..83       MOV       DPH,?V15
+   \   00029C   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1206                osal_mem_free(reportCmd->attrList[3].attrData);
    \                     ??CrossCallReturnLabel_68:
-   \   0002F0                ; Setup parameters for call to function osal_mem_free
-   \   0002F0   85..82       MOV       DPL,?V6
-   \   0002F3   85..83       MOV       DPH,?V7
-   \   0002F6   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1207                osal_mem_free(reportCmd->attrList[6].attrData);
+   \   00029F                ; Setup parameters for call to function osal_mem_free
+   \   00029F   85..82       MOV       DPL,?V10
+   \   0002A2   85..83       MOV       DPH,?V11
+   \   0002A5   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1207                osal_mem_free(reportCmd->attrList[4].attrData);
    \                     ??CrossCallReturnLabel_69:
-   \   0002F9                ; Setup parameters for call to function osal_mem_free
-   \   0002F9   85..82       MOV       DPL,?V4
-   \   0002FC   85..83       MOV       DPH,?V5
-   \   0002FF   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1208                osal_mem_free(reportCmd->attrList[7].attrData);
+   \   0002A8                ; Setup parameters for call to function osal_mem_free
+   \   0002A8   85..82       MOV       DPL,?V8
+   \   0002AB   85..83       MOV       DPH,?V9
+   \   0002AE   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1208                osal_mem_free(reportCmd->attrList[5].attrData);
    \                     ??CrossCallReturnLabel_70:
-   \   000302                ; Setup parameters for call to function osal_mem_free
-   \   000302   85..82       MOV       DPL,?V2
-   \   000305   85..83       MOV       DPH,?V3
-   \   000308   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1209                osal_mem_free(reportCmd->attrList[8].attrData);
+   \   0002B1                ; Setup parameters for call to function osal_mem_free
+   \   0002B1   85..82       MOV       DPL,?V6
+   \   0002B4   85..83       MOV       DPH,?V7
+   \   0002B7   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1209                osal_mem_free(reportCmd->attrList[6].attrData);
    \                     ??CrossCallReturnLabel_71:
-   \   00030B                ; Setup parameters for call to function osal_mem_free
-   \   00030B   85..82       MOV       DPL,?V0
-   \   00030E   85..83       MOV       DPH,?V1
-   \   000311   12....       LCALL     ??Subroutine21_0 & 0xFFFF
-   1210                osal_mem_free(reportCmd);
+   \   0002BA                ; Setup parameters for call to function osal_mem_free
+   \   0002BA   85..82       MOV       DPL,?V4
+   \   0002BD   85..83       MOV       DPH,?V5
+   \   0002C0   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1210                osal_mem_free(reportCmd->attrList[7].attrData);
    \                     ??CrossCallReturnLabel_72:
-   \   000314                ; Setup parameters for call to function osal_mem_free
-   \   000314   EE           MOV       A,R6
-   \   000315   FA           MOV       R2,A
-   \   000316   EF           MOV       A,R7
-   \   000317   FB           MOV       R3,A
-   \   000318   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
-   1211            }
+   \   0002C3                ; Setup parameters for call to function osal_mem_free
+   \   0002C3   85..82       MOV       DPL,?V2
+   \   0002C6   85..83       MOV       DPH,?V3
+   \   0002C9   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1211                osal_mem_free(reportCmd->attrList[8].attrData);
+   \                     ??CrossCallReturnLabel_73:
+   \   0002CC                ; Setup parameters for call to function osal_mem_free
+   \   0002CC   85..82       MOV       DPL,?V0
+   \   0002CF   85..83       MOV       DPH,?V1
+   \   0002D2   12....       LCALL     ??Subroutine22_0 & 0xFFFF
+   1212                osal_mem_free(reportCmd);
+   \                     ??CrossCallReturnLabel_74:
+   \   0002D5                ; Setup parameters for call to function osal_mem_free
+   \   0002D5   EE           MOV       A,R6
+   \   0002D6   FA           MOV       R2,A
+   \   0002D7   EF           MOV       A,R7
+   \   0002D8   FB           MOV       R3,A
+   \   0002D9   12....       LCALL     `??osal_mem_free::?relay`; Banked call to: osal_mem_free
+   1213            }
    \                     ??zclSampleSw_ReportTest_0:
-   \   00031B   7416         MOV       A,#0x16
-   \   00031D   12....       LCALL     ?DEALLOC_XSTACK8
-   \   000320   7F10         MOV       R7,#0x10
-   \   000322   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   0002DC   7416         MOV       A,#0x16
+   \   0002DE   12....       LCALL     ?DEALLOC_XSTACK8
+   \   0002E1   7F10         MOV       R7,#0x10
+   \   0002E3   02....       LJMP      ?BANKED_LEAVE_XDATA
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine15:
@@ -2913,7 +2876,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   000002   E4           CLR       A
    \   000003   3F           ADDC      A,R7
    \   000004   F583         MOV       DPH,A
-   \   000006   7431         MOV       A,#0x31
+   \   000006   7429         MOV       A,#0x29
    \   000008   F0           MOVX      @DPTR,A
    \   000009   22           RET
 
@@ -2928,7 +2891,23 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   00000C   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine10:
+   \                     ?Subroutine11:
+   \   000000   12....       LCALL     ?Subroutine16 & 0xFFFF
+   \                     ??CrossCallReturnLabel_54:
+   \   000003   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine16:
+   \   000000   12....       LCALL     ?Subroutine18 & 0xFFFF
+   \                     ??CrossCallReturnLabel_58:
+   \   000003   EA           MOV       A,R2
+   \   000004   F0           MOVX      @DPTR,A
+   \   000005   A3           INC       DPTR
+   \   000006   EB           MOV       A,R3
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine9:
    \   000000   E0           MOVX      A,@DPTR
    \   000001   FA           MOV       R2,A
    \   000002   A3           INC       DPTR
@@ -2943,33 +2922,16 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \   00000D   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine9:
-   \   000000   12....       LCALL     ?Subroutine16 & 0xFFFF
-   \                     ??CrossCallReturnLabel_54:
-   \   000003   22           RET
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ?Subroutine16:
-   \   000000   12....       LCALL     ?Subroutine17 & 0xFFFF
-   \                     ??CrossCallReturnLabel_56:
-   \   000003   EA           MOV       A,R2
-   \   000004   F0           MOVX      @DPTR,A
-   \   000005   A3           INC       DPTR
-   \   000006   EB           MOV       A,R3
-   \   000007   F0           MOVX      @DPTR,A
-   \   000008   22           RET
-
-   \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine7:
    \   000000   A3           INC       DPTR
    \   000001   A3           INC       DPTR
    \   000002   A3           INC       DPTR
    \   000003   A3           INC       DPTR
-   \   000004                REQUIRE ??Subroutine21_0
-   \   000004                ; // Fall through to label ??Subroutine21_0
+   \   000004                REQUIRE ??Subroutine22_0
+   \   000004                ; // Fall through to label ??Subroutine22_0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine21_0:
+   \                     ??Subroutine22_0:
    \   000000   E0           MOVX      A,@DPTR
    \   000001   FA           MOV       R2,A
    \   000002   A3           INC       DPTR
@@ -2980,29 +2942,40 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine5:
-   \   000000   F0           MOVX      @DPTR,A
-   \   000001   A3           INC       DPTR
+   \   000000   F582         MOV       DPL,A
    \   000002   E4           CLR       A
-   \   000003   F0           MOVX      @DPTR,A
-   \   000004   8E82         MOV       DPL,R6
-   \   000006   8F83         MOV       DPH,R7
+   \   000003   3F           ADDC      A,R7
+   \   000004   F583         MOV       DPH,A
+   \   000006   E4           CLR       A
+   \   000007   F0           MOVX      @DPTR,A
    \   000008   A3           INC       DPTR
-   \   000009   A3           INC       DPTR
-   \   00000A   A3           INC       DPTR
+   \   000009   F0           MOVX      @DPTR,A
+   \   00000A   EE           MOV       A,R6
    \   00000B   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine4:
-   \   000000   12....       LCALL     ?Subroutine16 & 0xFFFF
-   \                     ??CrossCallReturnLabel_53:
-   \   000003   EE           MOV       A,R6
-   \   000004   22           RET
+   \   000000   12....       LCALL     ?Subroutine17 & 0xFFFF
+   \                     ??CrossCallReturnLabel_56:
+   \   000003   A3           INC       DPTR
+   \   000004   A3           INC       DPTR
+   \   000005   A3           INC       DPTR
+   \   000006   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine17:
+   \   000000   F0           MOVX      @DPTR,A
+   \   000001   8E82         MOV       DPL,R6
+   \   000003   8F83         MOV       DPH,R7
+   \   000005   A3           INC       DPTR
+   \   000006   A3           INC       DPTR
+   \   000007   A3           INC       DPTR
+   \   000008   22           RET
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine3:
-   \   000000   F0           MOVX      @DPTR,A
-   \   000001   A3           INC       DPTR
-   \   000002   E4           CLR       A
+   \   000000   12....       LCALL     ?Subroutine16 & 0xFFFF
+   \                     ??CrossCallReturnLabel_53:
    \   000003   F0           MOVX      @DPTR,A
    \   000004   EE           MOV       A,R6
    \   000005   22           RET
@@ -3010,11 +2983,11 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
    \                     ?Subroutine2:
    \   000000   F583         MOV       DPH,A
-   \   000002                REQUIRE ??Subroutine22_0
-   \   000002                ; // Fall through to label ??Subroutine22_0
+   \   000002                REQUIRE ??Subroutine23_0
+   \   000002                ; // Fall through to label ??Subroutine23_0
 
    \                                 In  segment BANKED_CODE, align 1, keep-with-next
-   \                     ??Subroutine22_0:
+   \                     ??Subroutine23_0:
    \   000000   EA           MOV       A,R2
    \   000001   F0           MOVX      @DPTR,A
    \   000002   A3           INC       DPTR
@@ -3035,7 +3008,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for temp_VOC>`:
-   \   000000   AA00         DW 170
+   \   000000   AC08         DW 2220
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for temp_O3>`:
@@ -3071,7 +3044,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
 
    \                                 In  segment XDATA_ID, align 1, keep-with-next
    \                     `?<Initializer for sampleSw_TestEp>`:
-   \   000000   08           DB 8
+   \   000000   03           DB 3
    \   000001   00           DB 0
    \   000002   ....         DW zclSampleSw_TaskID
    \   000004   0000         DW 0H
@@ -3239,7 +3212,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
    \                                 In  segment XDATA_ROM_C, align 1
    \                     __Constant_1388:
    \   000000   88130000     DD 5000
-   1212          #endif
+   1214          #endif
 
    Maximum stack usage in bytes:
 
@@ -3327,29 +3300,30 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
       18  ?<Initializer for zclSampleSw_CmdCallbacks>
        1  ?<Initializer for zclSampleSw_NwkState>
        1  ?<Initializer for zclSampleSw_OnOffSwitchType>
-       2  ??Subroutine18_0
-      11  ??Subroutine19_0
-       8  ??Subroutine20_0
-       9  ??Subroutine21_0
-       8  ??Subroutine22_0
+       2  ??Subroutine19_0
+      11  ??Subroutine20_0
+       8  ??Subroutine21_0
+       9  ??Subroutine22_0
+       8  ??Subroutine23_0
        5  ?Subroutine0
        7  ?Subroutine1
-      14  ?Subroutine10
-       6  ?Subroutine11
+       6  ?Subroutine10
+       4  ?Subroutine11
        6  ?Subroutine12
       13  ?Subroutine13
       10  ?Subroutine14
       20  ?Subroutine15
-       9  ?Subroutine16
+       8  ?Subroutine16
        9  ?Subroutine17
+       9  ?Subroutine18
        2  ?Subroutine2
        6  ?Subroutine3
-       5  ?Subroutine4
+       7  ?Subroutine4
       12  ?Subroutine5
       23  ?Subroutine6
        4  ?Subroutine7
        2  ?Subroutine8
-       4  ?Subroutine9
+      14  ?Subroutine9
        4  __Constant_1388
        4  __Constant_1f4
        4  __Constant_3e8
@@ -3382,7 +3356,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
        6  zclSampleSw_ProcessInDiscCmdsRspCmd::?relay
      290  zclSampleSw_ProcessIncomingMsg
        6  zclSampleSw_ProcessIncomingMsg::?relay
-     805  zclSampleSw_ReportTest
+     742  zclSampleSw_ReportTest
        6  zclSampleSw_ReportTest::?relay
        1  zclSampleSw_TaskID
       64  zclSampleSw_UartBuf
@@ -3392,7 +3366,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
        6  zclSampleSw_event_loop::?relay
 
  
- 2 339 bytes in segment BANKED_CODE
+ 2 286 bytes in segment BANKED_CODE
     48 bytes in segment BANK_RELAYS
     45 bytes in segment XDATA_I
     45 bytes in segment XDATA_ID
@@ -3401,7 +3375,7 @@ Warning[Pe177]: function "zclSampleSw_ReportTest1" was declared but never
  
     93 bytes of CODE     memory
    152 bytes of CONST    memory (+ 16 bytes shared)
- 2 339 bytes of HUGECODE memory
+ 2 286 bytes of HUGECODE memory
    127 bytes of XDATA    memory
 
 Errors: none

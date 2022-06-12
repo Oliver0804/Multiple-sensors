@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.20.1.5333 for 8051              28/Apr/2022  00:42:49
+// IAR C/C++ Compiler V10.20.1.5333 for 8051              12/Jun/2022  16:35:53
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -15,7 +15,7 @@
 //        C:\Texas
 //        Instruments\Multiple_sensors\Components\stack\zdo\ZDProfile.c
 //    Command line       =  
-//        -f C:\Users\icetz\AppData\Local\Temp\EW6D5A.tmp ("C:\Texas
+//        -f C:\Users\icetz\AppData\Local\Temp\EW54CF.tmp ("C:\Texas
 //        Instruments\Multiple_sensors\Components\stack\zdo\ZDProfile.c" -D
 //        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1 -D
 //        xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
@@ -38,7 +38,7 @@
 //        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 //        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
-//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DDEFAULT_CHANLIST=0x00008000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 //        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
 //        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
@@ -48,7 +48,7 @@
 //        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
 //        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0}
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
-//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
 //        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
 //        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas
@@ -596,24 +596,26 @@ ZDApp_SetParentAnnceTimer SYMBOL "ZDApp_SetParentAnnceTimer"
 `??ZDApp_SetParentAnnceTimer::?relay` SYMBOL "?relay", ZDApp_SetParentAnnceTimer
 `?<Name ZDO_ProcessActiveEPR 10>` SYMBOL "ZDO_ProcessActiveEPReq"
 `??ZDO_ProcessActiveEPReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessActiveEPR 10>`
-`?<Name ZDO_ProcessMatchDesc 12>` SYMBOL "ZDO_ProcessMatchDescReq"
-`??ZDO_ProcessMatchDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMatchDesc 12>`
-`?<Name ZDO_ProcessMgmtBindR 14>` SYMBOL "ZDO_ProcessMgmtBindReq"
-`??ZDO_ProcessMgmtBindReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMgmtBindR 14>`
-`?<Name ZDO_ProcessMgmtLeave 16>` SYMBOL "ZDO_ProcessMgmtLeaveReq"
-`??ZDO_ProcessMgmtLeaveReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMgmtLeave 16>`
-`?<Name ZDO_ProcessMgmtLqiRe 18>` SYMBOL "ZDO_ProcessMgmtLqiReq"
-`??ZDO_ProcessMgmtLqiReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMgmtLqiRe 18>`
-`?<Name ZDO_ProcessNodeDescR 20>` SYMBOL "ZDO_ProcessNodeDescReq"
-`??ZDO_ProcessNodeDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessNodeDescR 20>`
-`?<Name ZDO_ProcessNodeDescR 22>` SYMBOL "ZDO_ProcessNodeDescRsp"
-`??ZDO_ProcessNodeDescRsp::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessNodeDescR 22>`
-`?<Name ZDO_ProcessPowerDesc 24>` SYMBOL "ZDO_ProcessPowerDescReq"
-`??ZDO_ProcessPowerDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessPowerDesc 24>`
-`?<Name ZDO_ProcessSimpleDes 26>` SYMBOL "ZDO_ProcessSimpleDescReq"
-`??ZDO_ProcessSimpleDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessSimpleDes 26>`
-`?<Name ZDO_ProcessSimpleDes 28>` SYMBOL "ZDO_ProcessSimpleDescRsp"
-`??ZDO_ProcessSimpleDescRsp::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessSimpleDes 28>`
+`?<Name ZDO_ProcessDeviceAnn 12>` SYMBOL "ZDO_ProcessDeviceAnnce"
+`??ZDO_ProcessDeviceAnnce::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessDeviceAnn 12>`
+`?<Name ZDO_ProcessMatchDesc 14>` SYMBOL "ZDO_ProcessMatchDescReq"
+`??ZDO_ProcessMatchDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMatchDesc 14>`
+`?<Name ZDO_ProcessMgmtBindR 16>` SYMBOL "ZDO_ProcessMgmtBindReq"
+`??ZDO_ProcessMgmtBindReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMgmtBindR 16>`
+`?<Name ZDO_ProcessMgmtLeave 18>` SYMBOL "ZDO_ProcessMgmtLeaveReq"
+`??ZDO_ProcessMgmtLeaveReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMgmtLeave 18>`
+`?<Name ZDO_ProcessMgmtLqiRe 20>` SYMBOL "ZDO_ProcessMgmtLqiReq"
+`??ZDO_ProcessMgmtLqiReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessMgmtLqiRe 20>`
+`?<Name ZDO_ProcessNodeDescR 22>` SYMBOL "ZDO_ProcessNodeDescReq"
+`??ZDO_ProcessNodeDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessNodeDescR 22>`
+`?<Name ZDO_ProcessNodeDescR 24>` SYMBOL "ZDO_ProcessNodeDescRsp"
+`??ZDO_ProcessNodeDescRsp::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessNodeDescR 24>`
+`?<Name ZDO_ProcessPowerDesc 26>` SYMBOL "ZDO_ProcessPowerDescReq"
+`??ZDO_ProcessPowerDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessPowerDesc 26>`
+`?<Name ZDO_ProcessSimpleDes 28>` SYMBOL "ZDO_ProcessSimpleDescReq"
+`??ZDO_ProcessSimpleDescReq::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessSimpleDes 28>`
+`?<Name ZDO_ProcessSimpleDes 30>` SYMBOL "ZDO_ProcessSimpleDescRsp"
+`??ZDO_ProcessSimpleDescRsp::?relay` SYMBOL "?relay", `?<Name ZDO_ProcessSimpleDes 30>`
 osal_buffer_uint32  SYMBOL "osal_buffer_uint32"
 `??osal_buffer_uint32::?relay` SYMBOL "?relay", osal_buffer_uint32
 osal_mem_alloc      SYMBOL "osal_mem_alloc"
@@ -715,6 +717,8 @@ zdpProcessAddrReq   SYMBOL "zdpProcessAddrReq"
         FUNCTION `??ZDApp_SetParentAnnceTimer::?relay`,00H
         EXTERN `??ZDO_ProcessActiveEPReq::?relay`
         FUNCTION `??ZDO_ProcessActiveEPReq::?relay`,00H
+        EXTERN `??ZDO_ProcessDeviceAnnce::?relay`
+        FUNCTION `??ZDO_ProcessDeviceAnnce::?relay`,00H
         EXTERN `??ZDO_ProcessMatchDescReq::?relay`
         FUNCTION `??ZDO_ProcessMatchDescReq::?relay`,00H
         EXTERN `??ZDO_ProcessMgmtBindReq::?relay`
@@ -1088,6 +1092,8 @@ zdoMsgCBs:
 //  177 CONST zdpMsgProcItem_t zdpMsgProcs[] =
 zdpMsgProcs:
         DATA16
+        DW 19
+        DW `??ZDO_ProcessDeviceAnnce::?relay`
         DW 0
         DW `??zdpProcessAddrReq::?relay`
         DW 1
@@ -21468,13 +21474,13 @@ __Constant_a:
 // 
 // 6 941 bytes in segment BANKED_CODE
 //   210 bytes in segment BANK_RELAYS
-//    53 bytes in segment CODE_C
+//    57 bytes in segment CODE_C
 //     2 bytes in segment XDATA_I
 //     2 bytes in segment XDATA_ID
 //     4 bytes in segment XDATA_ROM_C
 //    85 bytes in segment XDATA_Z
 // 
-//   265 bytes of CODE     memory
+//   269 bytes of CODE     memory
 //     0 bytes of CONST    memory (+ 4 bytes shared)
 // 6 941 bytes of HUGECODE memory
 //    87 bytes of XDATA    memory

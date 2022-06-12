@@ -12,7 +12,7 @@
         <ByteLimit>50</ByteLimit>
     </Stack>
     <DebugChecksum>
-        <Checksum>1997979816</Checksum>
+        <Checksum>662831908</Checksum>
     </DebugChecksum>
     <CallStack>
         <ShowArgs>0</ShowArgs>
@@ -23,6 +23,18 @@
     <watch_formats>
         <Fmt0>{W}1:temp_VOC	4	0</Fmt0>
     </watch_formats>
+    <BreakpointUsageDialog>
+        <Placement>_ 498 289 943 572</Placement>
+    </BreakpointUsageDialog>
+    <Breakpoints>
+        <Bp0>_ "STD_CODE" "{C:\Texas Instruments\Multiple_sensors\Components\mt\MT_TASK.c}.94.3" 0 0 0 0 "" 0 ""</Bp0>
+        <Bp1>_ "STD_CODE" "LogicalCode:0x4DBE0" 0 0 0 0 "" 0 ""</Bp1>
+        <Count>2</Count>
+    </Breakpoints>
+    <ChipconEmu>
+        <StopTimersOnHalt>0</StopTimersOnHalt>
+        <LeaveTargetRunning>1</LeaveTargetRunning>
+    </ChipconEmu>
     <LogFile>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -32,13 +44,6 @@
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
-    <Breakpoints>
-        <Count>0</Count>
-    </Breakpoints>
-    <ChipconEmu>
-        <StopTimersOnHalt>0</StopTimersOnHalt>
-        <LeaveTargetRunning>1</LeaveTargetRunning>
-    </ChipconEmu>
     <Aliases>
         <A0>_ "I:\ZigBee3.0\1. 基于ZCL属性上报测试非常成功终端和协调器组网\1. 基于ZCL属性上报2021092822\Z-Stack 3.0.1\Components\stack\nwk\nwk_globals.c" ""</A0>
         <A1>_ "I:\ZigBee3.0\1. 基于ZCL属性上报测试非常成功终端和协调器组网\1. 基于ZCL属性上报2021092822\Z-Stack 3.0.1\Projects\zstack\ZMain\TI2530DB\ZMain.c" ""</A1>

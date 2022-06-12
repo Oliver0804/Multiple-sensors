@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// IAR C/C++ Compiler V10.20.1.5333 for 8051              28/Apr/2022  00:42:41
+// IAR C/C++ Compiler V10.20.1.5333 for 8051              12/Jun/2022  16:35:45
 // Copyright 2004-2018 IAR Systems AB.
 // PC-locked license - IAR Embedded Workbench for 8051
 //
@@ -15,7 +15,7 @@
 //        C:\Texas
 //        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\OSAL_SampleSw.c
 //    Command line       =  
-//        -f C:\Users\icetz\AppData\Local\Temp\EW4FFD.tmp ("C:\Texas
+//        -f C:\Users\icetz\AppData\Local\Temp\EW385C.tmp ("C:\Texas
 //        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\Source\OSAL_SampleSw.c"
 //        -D SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1
 //        -D xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
@@ -38,7 +38,7 @@
 //        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 //        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 //        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
-//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DDEFAULT_CHANLIST=0x00008000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 //        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 //        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
 //        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
@@ -48,7 +48,7 @@
 //        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
 //        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0}
 //        -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
-//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE
 //        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
 //        -DREJOIN_POLL_RATE=440 -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000
 //        -DENABLE_LED4_DISABLE_S1) -f "C:\Texas
@@ -261,16 +261,20 @@ ZDApp_Init          SYMBOL "ZDApp_Init"
 `??ZDApp_Init::?relay` SYMBOL "?relay", ZDApp_Init
 `?<Name ZDApp_event_loop 14>` SYMBOL "ZDApp_event_loop"
 `??ZDApp_event_loop::?relay` SYMBOL "?relay", `?<Name ZDApp_event_loop 14>`
+ZDNwkMgr_Init       SYMBOL "ZDNwkMgr_Init"
+`??ZDNwkMgr_Init::?relay` SYMBOL "?relay", ZDNwkMgr_Init
+`?<Name ZDNwkMgr_event_loop 18>` SYMBOL "ZDNwkMgr_event_loop"
+`??ZDNwkMgr_event_loop::?relay` SYMBOL "?relay", `?<Name ZDNwkMgr_event_loop 18>`
 bdb_Init            SYMBOL "bdb_Init"
 `??bdb_Init::?relay` SYMBOL "?relay", bdb_Init
-`?<Name bdb_event_loop 18>` SYMBOL "bdb_event_loop"
-`??bdb_event_loop::?relay` SYMBOL "?relay", `?<Name bdb_event_loop 18>`
-`?<Name macEventLoop 20>` SYMBOL "macEventLoop"
-`??macEventLoop::?relay` SYMBOL "?relay", `?<Name macEventLoop 20>`
+`?<Name bdb_event_loop 22>` SYMBOL "bdb_event_loop"
+`??bdb_event_loop::?relay` SYMBOL "?relay", `?<Name bdb_event_loop 22>`
+`?<Name macEventLoop 24>` SYMBOL "macEventLoop"
+`??macEventLoop::?relay` SYMBOL "?relay", `?<Name macEventLoop 24>`
 macTaskInit         SYMBOL "macTaskInit"
 `??macTaskInit::?relay` SYMBOL "?relay", macTaskInit
-`?<Name nwk_event_loop 24>` SYMBOL "nwk_event_loop"
-`??nwk_event_loop::?relay` SYMBOL "?relay", `?<Name nwk_event_loop 24>`
+`?<Name nwk_event_loop 28>` SYMBOL "nwk_event_loop"
+`??nwk_event_loop::?relay` SYMBOL "?relay", `?<Name nwk_event_loop 28>`
 nwk_init            SYMBOL "nwk_init"
 `??nwk_init::?relay` SYMBOL "?relay", nwk_init
 osal_mem_alloc      SYMBOL "osal_mem_alloc"
@@ -279,12 +283,12 @@ osal_memset         SYMBOL "osal_memset"
 `??osal_memset::?relay` SYMBOL "?relay", osal_memset
 zclSampleSw_Init    SYMBOL "zclSampleSw_Init"
 `??zclSampleSw_Init::?relay` SYMBOL "?relay", zclSampleSw_Init
-`?<Name zclSampleSw_event_lo 34>` SYMBOL "zclSampleSw_event_loop"
-`??zclSampleSw_event_loop::?relay` SYMBOL "?relay", `?<Name zclSampleSw_event_lo 34>`
+`?<Name zclSampleSw_event_lo 38>` SYMBOL "zclSampleSw_event_loop"
+`??zclSampleSw_event_loop::?relay` SYMBOL "?relay", `?<Name zclSampleSw_event_lo 38>`
 zcl_Init            SYMBOL "zcl_Init"
 `??zcl_Init::?relay` SYMBOL "?relay", zcl_Init
-`?<Name zcl_event_loop 38>` SYMBOL "zcl_event_loop"
-`??zcl_event_loop::?relay` SYMBOL "?relay", `?<Name zcl_event_loop 38>`
+`?<Name zcl_event_loop 42>` SYMBOL "zcl_event_loop"
+`??zcl_event_loop::?relay` SYMBOL "?relay", `?<Name zcl_event_loop 42>`
 osalInitTasks       SYMBOL "osalInitTasks"
 `??osalInitTasks::?relay` SYMBOL "?relay", osalInitTasks
 
@@ -304,6 +308,10 @@ osalInitTasks       SYMBOL "osalInitTasks"
         FUNCTION `??ZDApp_Init::?relay`,00H
         EXTERN `??ZDApp_event_loop::?relay`
         FUNCTION `??ZDApp_event_loop::?relay`,00H
+        EXTERN `??ZDNwkMgr_Init::?relay`
+        FUNCTION `??ZDNwkMgr_Init::?relay`,00H
+        EXTERN `??ZDNwkMgr_event_loop::?relay`
+        FUNCTION `??ZDNwkMgr_event_loop::?relay`,00H
         EXTERN `??bdb_Init::?relay`
         FUNCTION `??bdb_Init::?relay`,00H
         EXTERN `??bdb_event_loop::?relay`
@@ -351,6 +359,13 @@ osalInitTasks       SYMBOL "osalInitTasks"
         ARGFRAME DOVERLAY, 0, STATIC
         EXTERN ZDApp_Init
         FUNCTION ZDApp_Init,0202H
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        EXTERN ZDNwkMgr_Init
+        FUNCTION ZDNwkMgr_Init,0202H
         ARGFRAME ISTACK, 2, STACK
         ARGFRAME PSTACK, 0, STACK
         ARGFRAME XSTACK, 0, STACK
@@ -509,6 +524,7 @@ tasksArr:
         DW `??APS_event_loop::?relay`
         DW `??APSF_ProcessEvent::?relay`
         DW `??ZDApp_event_loop::?relay`
+        DW `??ZDNwkMgr_event_loop::?relay`
         DW `??zcl_event_loop::?relay`
         DW `??bdb_event_loop::?relay`
         DW `??zclSampleSw_event_loop::?relay`
@@ -554,7 +570,7 @@ tasksArr:
         DATA8
 //  129 const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
 tasksCnt:
-        DB 9
+        DB 10
 
         RSEG XDATA_Z:XDATA:NOROOT(0)
         DATA16
@@ -672,6 +688,17 @@ osalInitTasks:
         ARGFRAME XSTACK, 0, STACK
         ARGFRAME IOVERLAY, 0, STATIC
         ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL osalInitTasks, ZDNwkMgr_Init
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
         FUNCALL osalInitTasks, zcl_Init
         LOCFRAME ISTACK, 2, STACK
         LOCFRAME PSTACK, 0, STACK
@@ -717,7 +744,7 @@ osalInitTasks:
 //  148 
 //  149   tasksEvents = (uint16 *)osal_mem_alloc( sizeof( uint16 ) * tasksCnt);
         ; Setup parameters for call to function osal_mem_alloc
-        MOV       R2,#0x12
+        MOV       R2,#0x14
         MOV       R3,#0x0
         LCALL     `??osal_mem_alloc::?relay`; Banked call to: osal_mem_alloc
         MOV       DPTR,#tasksEvents
@@ -728,7 +755,7 @@ osalInitTasks:
         MOVX      @DPTR,A
 //  150   osal_memset( tasksEvents, 0, (sizeof( uint16 ) * tasksCnt));
         ; Setup parameters for call to function osal_memset
-        MOV       R4,#0x12
+        MOV       R4,#0x14
         MOV       R5,#0x0
         MOV       R1,#0x0
         LCALL     `??osal_memset::?relay`; Banked call to: osal_memset
@@ -767,6 +794,9 @@ osalInitTasks:
         LCALL     `??ZDApp_Init::?relay`; Banked call to: ZDApp_Init
 //  166 #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
 //  167   ZDNwkMgr_Init( taskID++ );
+        ; Setup parameters for call to function ZDNwkMgr_Init
+        MOV       R1,#0x6
+        LCALL     `??ZDNwkMgr_Init::?relay`; Banked call to: ZDNwkMgr_Init
 //  168 #endif
 //  169   // Added to include TouchLink functionality 
 //  170   #if defined ( INTER_PAN )
@@ -782,15 +812,15 @@ osalInitTasks:
 //  180   #endif
 //  181   zcl_Init( taskID++ );
         ; Setup parameters for call to function zcl_Init
-        MOV       R1,#0x6
+        MOV       R1,#0x7
         LCALL     `??zcl_Init::?relay`; Banked call to: zcl_Init
 //  182   bdb_Init( taskID++ );
         ; Setup parameters for call to function bdb_Init
-        MOV       R1,#0x7
+        MOV       R1,#0x8
         LCALL     `??bdb_Init::?relay`; Banked call to: bdb_Init
 //  183   zclSampleSw_Init( taskID++ );
         ; Setup parameters for call to function zclSampleSw_Init
-        MOV       R1,#0x8
+        MOV       R1,#0x9
         LCALL     `??zclSampleSw_Init::?relay`; Banked call to: zclSampleSw_Init
 //  184 #if (defined OTA_CLIENT) && (OTA_CLIENT == TRUE)
 //  185   zclOTA_Init( taskID );
@@ -817,14 +847,14 @@ osalInitTasks:
 //  189 /*********************************************************************
 //  190 *********************************************************************/
 // 
-// 80 bytes in segment BANKED_CODE
+// 85 bytes in segment BANKED_CODE
 //  6 bytes in segment BANK_RELAYS
-// 19 bytes in segment XDATA_ROM_C
+// 21 bytes in segment XDATA_ROM_C
 //  2 bytes in segment XDATA_Z
 // 
 //  6 bytes of CODE     memory
-// 19 bytes of CONST    memory
-// 80 bytes of HUGECODE memory
+// 21 bytes of CONST    memory
+// 85 bytes of HUGECODE memory
 //  2 bytes of XDATA    memory
 //
 //Errors: none

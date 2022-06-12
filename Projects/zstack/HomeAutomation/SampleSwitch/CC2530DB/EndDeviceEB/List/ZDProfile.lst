@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR C/C++ Compiler V10.20.1.5333 for 8051               28/Apr/2022  00:42:50
+# IAR C/C++ Compiler V10.20.1.5333 for 8051               12/Jun/2022  16:35:53
 # Copyright 2004-2018 IAR Systems AB.
 # PC-locked license - IAR Embedded Workbench for 8051
 #
@@ -14,7 +14,7 @@
 #    Source file        =  
 #        C:\Texas Instruments\Multiple_sensors\Components\stack\zdo\ZDProfile.c
 #    Command line       =  
-#        -f C:\Users\icetz\AppData\Local\Temp\EW6D5A.tmp ("C:\Texas
+#        -f C:\Users\icetz\AppData\Local\Temp\EW54CF.tmp ("C:\Texas
 #        Instruments\Multiple_sensors\Components\stack\zdo\ZDProfile.c" -D
 #        SECURE=1 -D TC_LINKKEY_JOIN -D NV_INIT -D NV_RESTORE -D xZTOOL_P1 -D
 #        xMT_TASK -D xMT_APP_FUNC -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
@@ -37,7 +37,7 @@
 #        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f "C:\Texas
 #        Instruments\Multiple_sensors\Projects\zstack\HomeAutomation\SampleSwitch\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"
 #        (-DZIGBEEPRO -DSECURE=1 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
-#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DDEFAULT_CHANLIST=0x00008000 -DZDAPP_CONFIG_PAN_ID=0xFFFF
 #        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
 #        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
 #        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
@@ -47,7 +47,7 @@
 #        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
 #        -DMAX_BINDING_CLUSTER_IDS=4 -DDEFAULT_KEY={0} -DMAC_MAX_FRAME_SIZE=116
 #        -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const __code"
-#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000
+#        -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=TRUE -DPOLL_RATE=1000
 #        -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440
 #        -DREJOIN_BACKOFF=900000 -DREJOIN_SCAN=900000 -DENABLE_LED4_DISABLE_S1)
 #        -f "C:\Texas
@@ -341,32 +341,34 @@ C:\Texas Instruments\Multiple_sensors\Components\stack\zdo\ZDProfile.c
    \                                 In  segment CODE_C, align 1
     177          CONST zdpMsgProcItem_t zdpMsgProcs[] =
    \                     zdpMsgProcs:
-   \   000000   0000         DW 0
-   \   000002   ....         DW `??zdpProcessAddrReq::?relay`
-   \   000004   0100         DW 1
+   \   000000   1300         DW 19
+   \   000002   ....         DW `??ZDO_ProcessDeviceAnnce::?relay`
+   \   000004   0000         DW 0
    \   000006   ....         DW `??zdpProcessAddrReq::?relay`
-   \   000008   0200         DW 2
-   \   00000A   ....         DW `??ZDO_ProcessNodeDescReq::?relay`
-   \   00000C   0280         DW 32770
-   \   00000E   ....         DW `??ZDO_ProcessNodeDescRsp::?relay`
-   \   000010   0300         DW 3
-   \   000012   ....         DW `??ZDO_ProcessPowerDescReq::?relay`
-   \   000014   0400         DW 4
-   \   000016   ....         DW `??ZDO_ProcessSimpleDescReq::?relay`
-   \   000018   0480         DW 32772
-   \   00001A   ....         DW `??ZDO_ProcessSimpleDescRsp::?relay`
-   \   00001C   0500         DW 5
-   \   00001E   ....         DW `??ZDO_ProcessActiveEPReq::?relay`
-   \   000020   0600         DW 6
-   \   000022   ....         DW `??ZDO_ProcessMatchDescReq::?relay`
-   \   000024   3100         DW 49
-   \   000026   ....         DW `??ZDO_ProcessMgmtLqiReq::?relay`
-   \   000028   3300         DW 51
-   \   00002A   ....         DW `??ZDO_ProcessMgmtBindReq::?relay`
-   \   00002C   3400         DW 52
-   \   00002E   ....         DW `??ZDO_ProcessMgmtLeaveReq::?relay`
-   \   000030   FFFF         DW 65535
-   \   000032   0000         DW 0H
+   \   000008   0100         DW 1
+   \   00000A   ....         DW `??zdpProcessAddrReq::?relay`
+   \   00000C   0200         DW 2
+   \   00000E   ....         DW `??ZDO_ProcessNodeDescReq::?relay`
+   \   000010   0280         DW 32770
+   \   000012   ....         DW `??ZDO_ProcessNodeDescRsp::?relay`
+   \   000014   0300         DW 3
+   \   000016   ....         DW `??ZDO_ProcessPowerDescReq::?relay`
+   \   000018   0400         DW 4
+   \   00001A   ....         DW `??ZDO_ProcessSimpleDescReq::?relay`
+   \   00001C   0480         DW 32772
+   \   00001E   ....         DW `??ZDO_ProcessSimpleDescRsp::?relay`
+   \   000020   0500         DW 5
+   \   000022   ....         DW `??ZDO_ProcessActiveEPReq::?relay`
+   \   000024   0600         DW 6
+   \   000026   ....         DW `??ZDO_ProcessMatchDescReq::?relay`
+   \   000028   3100         DW 49
+   \   00002A   ....         DW `??ZDO_ProcessMgmtLqiReq::?relay`
+   \   00002C   3300         DW 51
+   \   00002E   ....         DW `??ZDO_ProcessMgmtBindReq::?relay`
+   \   000030   3400         DW 52
+   \   000032   ....         DW `??ZDO_ProcessMgmtLeaveReq::?relay`
+   \   000034   FFFF         DW 65535
+   \   000036   0000         DW 0H
     178          {
     179          #if ( RFD_RCVC_ALWAYS_ON==TRUE ) || ( ZG_BUILD_RTR_TYPE )
     180            // These aren't processed by sleeping end devices.
@@ -7982,20 +7984,20 @@ C:\Texas Instruments\Multiple_sensors\Components\stack\zdo\ZDProfile.c
      160  fillAndSend
        6  fillAndSend::?relay
        2  zdoMsgCBs
-      52  zdpMsgProcs
+      56  zdpMsgProcs
      355  zdpProcessAddrReq
        6  zdpProcessAddrReq::?relay
 
  
  6 941 bytes in segment BANKED_CODE
    210 bytes in segment BANK_RELAYS
-    53 bytes in segment CODE_C
+    57 bytes in segment CODE_C
      2 bytes in segment XDATA_I
      2 bytes in segment XDATA_ID
      4 bytes in segment XDATA_ROM_C
     85 bytes in segment XDATA_Z
  
-   265 bytes of CODE     memory
+   269 bytes of CODE     memory
      0 bytes of CONST    memory (+ 4 bytes shared)
  6 941 bytes of HUGECODE memory
     87 bytes of XDATA    memory
